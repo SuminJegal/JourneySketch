@@ -62,7 +62,7 @@ static NSString * const reuseIdentifier = @"places";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of items
-    return 10;
+    return 4;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -70,7 +70,7 @@ static NSString * const reuseIdentifier = @"places";
     
     
     
-    if(indexPath.row == 9){
+    if(indexPath.row == 3){
         [cell.label setText:@"New"];
         [cell.image setImage:[UIImage imageNamed:@"historically-1757930_1280.jpg"]];
     }else{
@@ -94,7 +94,7 @@ static NSString * const reuseIdentifier = @"places";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    if(indexPath.row == 9){
+    if(indexPath.row == 3){
         UIViewController* view = [self.storyboard instantiateViewControllerWithIdentifier:@"newPlace"];
         
         [self.navigationController pushViewController:view animated:YES];

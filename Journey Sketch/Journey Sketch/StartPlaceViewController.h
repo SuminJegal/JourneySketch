@@ -9,5 +9,6 @@
 #import <GooglePlaces/GooglePlaces.h>
 
 @interface StartPlaceViewController : GMSAutocompleteResultsViewController
+@property (weak, nonatomic) IBOutlet UITextField *inputPlace;
 
 @end
