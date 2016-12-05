@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9AF17210016211E428B87CB0 /* libPods-Journey Sketch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A665AAB2E9804C4973F8CCD5 /* libPods-Journey Sketch.a */; };
+		C90959181DF53A1600271D25 /* DayCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C90959171DF53A1600271D25 /* DayCollectionViewCell.m */; };
+		C909591B1DF53A3800271D25 /* DayCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C909591A1DF53A3800271D25 /* DayCollectionReusableView.m */; };
+		C909592F1DF587C900271D25 /* TripUICollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C909592D1DF587C900271D25 /* TripUICollectionViewController.m */; };
+		C90959321DF592F900271D25 /* CreateNewTrip1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C90959311DF592F900271D25 /* CreateNewTrip1ViewController.m */; };
+		C909593F1DF59AED00271D25 /* StartPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C909593E1DF59AED00271D25 /* StartPlaceViewController.m */; };
+		C90959411DF5A07E00271D25 /* historically-1757930_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C90959401DF5A07E00271D25 /* historically-1757930_1280.jpg */; };
+		C90959451DF5B47300271D25 /* startImage.png in Resources */ = {isa = PBXBuildFile; fileRef = C90959441DF5B47300271D25 /* startImage.png */; };
+		C91BDE331DF035A700379814 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91BDE321DF035A700379814 /* CoreLocation.framework */; };
+		C969E8AE1DF1C9E000E1DF67 /* Journey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C969E8AC1DF1C9E000E1DF67 /* Journey.xcdatamodeld */; };
+		C969E8B41DF1CD5200E1DF67 /* clouds-1845097_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C969E8B31DF1CD5200E1DF67 /* clouds-1845097_1280.jpg */; };
+		C969E8BA1DF1D43B00E1DF67 /* DayCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C969E8B91DF1D43B00E1DF67 /* DayCollectionViewController.m */; };
+		C969E8BD1DF1D94B00E1DF67 /* TripCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C969E8BC1DF1D94B00E1DF67 /* TripCollectionViewCell.m */; };
 		C9C111EB1DBDF9D200503177 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C111EA1DBDF9D200503177 /* main.m */; };
 		C9C111EE1DBDF9D200503177 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C111ED1DBDF9D200503177 /* AppDelegate.m */; };
 		C9C111F11DBDF9D200503177 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C111F01DBDF9D200503177 /* ViewController.m */; };
@@ -15,6 +28,7 @@
 		C9C111F91DBDF9D200503177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C111F71DBDF9D200503177 /* LaunchScreen.storyboard */; };
 		C9C112041DBDF9D200503177 /* Journey_SketchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C112031DBDF9D200503177 /* Journey_SketchTests.m */; };
 		C9C1120F1DBDF9D200503177 /* Journey_SketchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1120E1DBDF9D200503177 /* Journey_SketchUITests.m */; };
+		C9F9BA211DF160B600F8B2B2 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F9BA201DF160B600F8B2B2 /* PageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +49,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21D1C6F82E94EC43977A8F71 /* Pods-Journey Sketch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Journey Sketch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Journey Sketch/Pods-Journey Sketch.release.xcconfig"; sourceTree = "<group>"; };
+		A665AAB2E9804C4973F8CCD5 /* libPods-Journey Sketch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Journey Sketch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C90959161DF53A1600271D25 /* DayCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DayCollectionViewCell.h; path = "Journey Sketch/DayCollectionViewCell.h"; sourceTree = "<group>"; };
+		C90959171DF53A1600271D25 /* DayCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DayCollectionViewCell.m; path = "Journey Sketch/DayCollectionViewCell.m"; sourceTree = "<group>"; };
+		C90959191DF53A3800271D25 /* DayCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DayCollectionReusableView.h; path = "Journey Sketch/DayCollectionReusableView.h"; sourceTree = "<group>"; };
+		C909591A1DF53A3800271D25 /* DayCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DayCollectionReusableView.m; path = "Journey Sketch/DayCollectionReusableView.m"; sourceTree = "<group>"; };
+		C909592D1DF587C900271D25 /* TripUICollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripUICollectionViewController.m; sourceTree = "<group>"; };
+		C909592E1DF587C900271D25 /* TripUICollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripUICollectionViewController.h; sourceTree = "<group>"; };
+		C90959301DF592F900271D25 /* CreateNewTrip1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateNewTrip1ViewController.h; sourceTree = "<group>"; };
+		C90959311DF592F900271D25 /* CreateNewTrip1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateNewTrip1ViewController.m; sourceTree = "<group>"; };
+		C909593D1DF59AED00271D25 /* StartPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartPlaceViewController.h; sourceTree = "<group>"; };
+		C909593E1DF59AED00271D25 /* StartPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartPlaceViewController.m; sourceTree = "<group>"; };
+		C90959401DF5A07E00271D25 /* historically-1757930_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "historically-1757930_1280.jpg"; sourceTree = "<group>"; };
+		C90959441DF5B47300271D25 /* startImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startImage.png; sourceTree = "<group>"; };
+		C91BDE321DF035A700379814 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C969E8AD1DF1C9E000E1DF67 /* Journey.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Journey.xcdatamodel; sourceTree = "<group>"; };
+		C969E8B31DF1CD5200E1DF67 /* clouds-1845097_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "clouds-1845097_1280.jpg"; sourceTree = "<group>"; };
+		C969E8B81DF1D43B00E1DF67 /* DayCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DayCollectionViewController.h; path = "Journey Sketch/DayCollectionViewController.h"; sourceTree = "<group>"; };
+		C969E8B91DF1D43B00E1DF67 /* DayCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DayCollectionViewController.m; path = "Journey Sketch/DayCollectionViewController.m"; sourceTree = "<group>"; };
+		C969E8BB1DF1D94B00E1DF67 /* TripCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripCollectionViewCell.h; sourceTree = "<group>"; };
+		C969E8BC1DF1D94B00E1DF67 /* TripCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripCollectionViewCell.m; sourceTree = "<group>"; };
 		C9C111E61DBDF9D200503177 /* Journey Sketch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Journey Sketch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C111EA1DBDF9D200503177 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C9C111EC1DBDF9D200503177 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +86,9 @@
 		C9C1120A1DBDF9D200503177 /* Journey SketchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Journey SketchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C1120E1DBDF9D200503177 /* Journey_SketchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Journey_SketchUITests.m; sourceTree = "<group>"; };
 		C9C112101DBDF9D200503177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9F9BA1F1DF160B600F8B2B2 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		C9F9BA201DF160B600F8B2B2 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		EFA8687ABDC97327C65B089D /* Pods-Journey Sketch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Journey Sketch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Journey Sketch/Pods-Journey Sketch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91BDE331DF035A700379814 /* CoreLocation.framework in Frameworks */,
+				9AF17210016211E428B87CB0 /* libPods-Journey Sketch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +118,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		090E4CEB16D758FA749945D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8687ABDC97327C65B089D /* Pods-Journey Sketch.debug.xcconfig */,
+				21D1C6F82E94EC43977A8F71 /* Pods-Journey Sketch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		250ADA76283F2A1A6804FD83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C91BDE321DF035A700379814 /* CoreLocation.framework */,
+				A665AAB2E9804C4973F8CCD5 /* libPods-Journey Sketch.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C909592B1DF5853000271D25 /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				C969E8B81DF1D43B00E1DF67 /* DayCollectionViewController.h */,
+				C969E8B91DF1D43B00E1DF67 /* DayCollectionViewController.m */,
+				C90959161DF53A1600271D25 /* DayCollectionViewCell.h */,
+				C90959171DF53A1600271D25 /* DayCollectionViewCell.m */,
+				C90959191DF53A3800271D25 /* DayCollectionReusableView.h */,
+				C909591A1DF53A3800271D25 /* DayCollectionReusableView.m */,
+			);
+			name = Day;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		C909592C1DF5856000271D25 /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				C969E8BB1DF1D94B00E1DF67 /* TripCollectionViewCell.h */,
+				C969E8BC1DF1D94B00E1DF67 /* TripCollectionViewCell.m */,
+				C909592D1DF587C900271D25 /* TripUICollectionViewController.m */,
+				C909592E1DF587C900271D25 /* TripUICollectionViewController.h */,
+			);
+			name = Trip;
+			sourceTree = "<group>";
+		};
+		C90959331DF5930800271D25 /* addNewTrip */ = {
+			isa = PBXGroup;
+			children = (
+				C90959301DF592F900271D25 /* CreateNewTrip1ViewController.h */,
+				C90959311DF592F900271D25 /* CreateNewTrip1ViewController.m */,
+				C909593D1DF59AED00271D25 /* StartPlaceViewController.h */,
+				C909593E1DF59AED00271D25 /* StartPlaceViewController.m */,
+			);
+			name = addNewTrip;
+			sourceTree = "<group>";
+		};
+		C969E8B21DF1CD5200E1DF67 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				C90959401DF5A07E00271D25 /* historically-1757930_1280.jpg */,
+				C90959441DF5B47300271D25 /* startImage.png */,
+				C969E8B31DF1CD5200E1DF67 /* clouds-1845097_1280.jpg */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		C9C111DD1DBDF9D200503177 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +189,8 @@
 				C9C112021DBDF9D200503177 /* Journey SketchTests */,
 				C9C1120D1DBDF9D200503177 /* Journey SketchUITests */,
 				C9C111E71DBDF9D200503177 /* Products */,
+				090E4CEB16D758FA749945D5 /* Pods */,
+				250ADA76283F2A1A6804FD83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +207,18 @@
 		C9C111E81DBDF9D200503177 /* Journey Sketch */ = {
 			isa = PBXGroup;
 			children = (
-				C9C111EC1DBDF9D200503177 /* AppDelegate.h */,
-				C9C111ED1DBDF9D200503177 /* AppDelegate.m */,
+				C969E8B21DF1CD5200E1DF67 /* Image */,
+				C969E8AC1DF1C9E000E1DF67 /* Journey.xcdatamodeld */,
+				C9C111F21DBDF9D200503177 /* Main.storyboard */,
+				C909592C1DF5856000271D25 /* Trip */,
+				C909592B1DF5853000271D25 /* Day */,
+				C90959331DF5930800271D25 /* addNewTrip */,
 				C9C111EF1DBDF9D200503177 /* ViewController.h */,
 				C9C111F01DBDF9D200503177 /* ViewController.m */,
-				C9C111F21DBDF9D200503177 /* Main.storyboard */,
+				C9C111EC1DBDF9D200503177 /* AppDelegate.h */,
+				C9C111ED1DBDF9D200503177 /* AppDelegate.m */,
+				C9F9BA1F1DF160B600F8B2B2 /* PageViewController.h */,
+				C9F9BA201DF160B600F8B2B2 /* PageViewController.m */,
 				C9C111F51DBDF9D200503177 /* Assets.xcassets */,
 				C9C111F71DBDF9D200503177 /* LaunchScreen.storyboard */,
 				C9C111FA1DBDF9D200503177 /* Info.plist */,
@@ -147,9 +260,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9C112131DBDF9D200503177 /* Build configuration list for PBXNativeTarget "Journey Sketch" */;
 			buildPhases = (
+				0A903A56C7EF90CDC886694B /* [CP] Check Pods Manifest.lock */,
 				C9C111E21DBDF9D200503177 /* Sources */,
 				C9C111E31DBDF9D200503177 /* Frameworks */,
 				C9C111E41DBDF9D200503177 /* Resources */,
+				D795215DB7069B3433BBBD99 /* [CP] Embed Pods Frameworks */,
+				CEEE80AE5E0A5925417F26EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,7 +366,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9C111F91DBDF9D200503177 /* LaunchScreen.storyboard in Resources */,
+				C969E8B41DF1CD5200E1DF67 /* clouds-1845097_1280.jpg in Resources */,
+				C90959451DF5B47300271D25 /* startImage.png in Resources */,
 				C9C111F61DBDF9D200503177 /* Assets.xcassets in Resources */,
+				C90959411DF5A07E00271D25 /* historically-1757930_1280.jpg in Resources */,
 				C9C111F41DBDF9D200503177 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,14 +390,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A903A56C7EF90CDC886694B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CEEE80AE5E0A5925417F26EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Journey Sketch/Pods-Journey Sketch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D795215DB7069B3433BBBD99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Journey Sketch/Pods-Journey Sketch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C9C111E21DBDF9D200503177 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C9C111F11DBDF9D200503177 /* ViewController.m in Sources */,
+				C969E8BA1DF1D43B00E1DF67 /* DayCollectionViewController.m in Sources */,
 				C9C111EE1DBDF9D200503177 /* AppDelegate.m in Sources */,
+				C909593F1DF59AED00271D25 /* StartPlaceViewController.m in Sources */,
 				C9C111EB1DBDF9D200503177 /* main.m in Sources */,
+				C9F9BA211DF160B600F8B2B2 /* PageViewController.m in Sources */,
+				C909591B1DF53A3800271D25 /* DayCollectionReusableView.m in Sources */,
+				C969E8AE1DF1C9E000E1DF67 /* Journey.xcdatamodeld in Sources */,
+				C90959321DF592F900271D25 /* CreateNewTrip1ViewController.m in Sources */,
+				C90959181DF53A1600271D25 /* DayCollectionViewCell.m in Sources */,
+				C909592F1DF587C900271D25 /* TripUICollectionViewController.m in Sources */,
+				C969E8BD1DF1D94B00E1DF67 /* TripCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +601,7 @@
 		};
 		C9C112141DBDF9D200503177 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFA8687ABDC97327C65B089D /* Pods-Journey Sketch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3N2B4ECPAU;
@@ -437,6 +614,7 @@
 		};
 		C9C112151DBDF9D200503177 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21D1C6F82E94EC43977A8F71 /* Pods-Journey Sketch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3N2B4ECPAU;
@@ -516,6 +694,7 @@
 				C9C112151DBDF9D200503177 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9C112161DBDF9D200503177 /* Build configuration list for PBXNativeTarget "Journey SketchTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +703,7 @@
 				C9C112181DBDF9D200503177 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9C112191DBDF9D200503177 /* Build configuration list for PBXNativeTarget "Journey SketchUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,8 +712,22 @@
 				C9C1121B1DBDF9D200503177 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C969E8AC1DF1C9E000E1DF67 /* Journey.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C969E8AD1DF1C9E000E1DF67 /* Journey.xcdatamodel */,
+			);
+			currentVersion = C969E8AD1DF1C9E000E1DF67 /* Journey.xcdatamodel */;
+			path = Journey.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C9C111DE1DBDF9D200503177 /* Project object */;
 }
