@@ -8,7 +8,7 @@
 
 #import "StartPlaceViewController.h"
 
-@interface StartPlaceViewController () <GMSAutocompleteViewControllerDelegate>
+@interface StartPlaceViewController () 
 
 @property UISearchController *searchController;
 @property GMSAutocompleteResultsViewController *resultsViewController;
@@ -44,23 +44,27 @@ didFailAutocompleteWithError:(NSError *)error {
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:NO];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     _resultsViewController = [[GMSAutocompleteResultsViewController alloc] init];
-    _resultsViewController.delegate = self;
+    [_resultsViewController setDelegate:self];
     
     _searchController = [[UISearchController alloc]
                          initWithSearchResultsController:_resultsViewController];
     _searchController.searchResultsUpdater = _resultsViewController;
     
-    UIView *subView = [[UIView alloc] initWithFrame:CGRectMake(0, 65.0, [[UIScreen mainScreen] bounds].size.width, 50)];
+    UIView *subView = [[UIView alloc] initWithFrame:CGRectMake(0, ([[UIScreen mainScreen] bounds].size.height)*0.5-20, [[UIScreen mainScreen] bounds].size.width, 50)];
     
     [subView addSubview:_searchController.searchBar];
     [_searchController.searchBar sizeToFit];
     [self.view addSubview:subView];
-    
+    [self.background setImage:[UIImage imageNamed:@"startImage.png"]];
     // When UISearchController presents the results view, present it in
     // this view controller, not one further up the chain.
     self.definesPresentationContext = YES;
@@ -70,8 +74,7 @@ didFailAutocompleteWithError:(NSError *)error {
 - (void)resultsController:(GMSAutocompleteResultsViewController *)resultsController
  didAutocompleteWithPlace:(GMSPlace *)place {
     [self dismissViewControllerAnimated:YES completion:nil];
-    // Do something with the selected place.
-    [self.inputPlace setText:place.name];
+    // Do something with the selected place
     NSLog(@"Place name %@", place.name);
     NSLog(@"Place address %@", place.formattedAddress);
     NSLog(@"Place attributions %@", place.attributions.string);

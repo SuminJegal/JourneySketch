@@ -20,6 +20,8 @@
 		C969E8B41DF1CD5200E1DF67 /* clouds-1845097_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C969E8B31DF1CD5200E1DF67 /* clouds-1845097_1280.jpg */; };
 		C969E8BA1DF1D43B00E1DF67 /* DayCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C969E8B91DF1D43B00E1DF67 /* DayCollectionViewController.m */; };
 		C969E8BD1DF1D94B00E1DF67 /* TripCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C969E8BC1DF1D94B00E1DF67 /* TripCollectionViewCell.m */; };
+		C9A8E5E11DF67EA80011279A /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A8E5E01DF67EA80011279A /* PlaceViewController.m */; };
+		C9A8E5E41DF685C20011279A /* PlaceMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A8E5E31DF685C20011279A /* PlaceMapViewController.m */; };
 		C9C111EB1DBDF9D200503177 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C111EA1DBDF9D200503177 /* main.m */; };
 		C9C111EE1DBDF9D200503177 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C111ED1DBDF9D200503177 /* AppDelegate.m */; };
 		C9C111F11DBDF9D200503177 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C111F01DBDF9D200503177 /* ViewController.m */; };
@@ -70,6 +72,10 @@
 		C969E8B91DF1D43B00E1DF67 /* DayCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DayCollectionViewController.m; path = "Journey Sketch/DayCollectionViewController.m"; sourceTree = "<group>"; };
 		C969E8BB1DF1D94B00E1DF67 /* TripCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripCollectionViewCell.h; sourceTree = "<group>"; };
 		C969E8BC1DF1D94B00E1DF67 /* TripCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripCollectionViewCell.m; sourceTree = "<group>"; };
+		C9A8E5DF1DF67EA80011279A /* PlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceViewController.h; sourceTree = "<group>"; };
+		C9A8E5E01DF67EA80011279A /* PlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
+		C9A8E5E21DF685C20011279A /* PlaceMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceMapViewController.h; sourceTree = "<group>"; };
+		C9A8E5E31DF685C20011279A /* PlaceMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceMapViewController.m; sourceTree = "<group>"; };
 		C9C111E61DBDF9D200503177 /* Journey Sketch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Journey Sketch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C111EA1DBDF9D200503177 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C9C111EC1DBDF9D200503177 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -182,6 +188,17 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		C9A8E5DE1DF67E7D0011279A /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				C9A8E5DF1DF67EA80011279A /* PlaceViewController.h */,
+				C9A8E5E01DF67EA80011279A /* PlaceViewController.m */,
+				C9A8E5E21DF685C20011279A /* PlaceMapViewController.h */,
+				C9A8E5E31DF685C20011279A /* PlaceMapViewController.m */,
+			);
+			name = Place;
+			sourceTree = "<group>";
+		};
 		C9C111DD1DBDF9D200503177 = {
 			isa = PBXGroup;
 			children = (
@@ -213,8 +230,9 @@
 				C909592C1DF5856000271D25 /* Trip */,
 				C909592B1DF5853000271D25 /* Day */,
 				C90959331DF5930800271D25 /* addNewTrip */,
-				C9C111EF1DBDF9D200503177 /* ViewController.h */,
+				C9A8E5DE1DF67E7D0011279A /* Place */,
 				C9C111F01DBDF9D200503177 /* ViewController.m */,
+				C9C111EF1DBDF9D200503177 /* ViewController.h */,
 				C9C111EC1DBDF9D200503177 /* AppDelegate.h */,
 				C9C111ED1DBDF9D200503177 /* AppDelegate.m */,
 				C9F9BA1F1DF160B600F8B2B2 /* PageViewController.h */,
@@ -450,11 +468,13 @@
 				C9C111EB1DBDF9D200503177 /* main.m in Sources */,
 				C9F9BA211DF160B600F8B2B2 /* PageViewController.m in Sources */,
 				C909591B1DF53A3800271D25 /* DayCollectionReusableView.m in Sources */,
+				C9A8E5E41DF685C20011279A /* PlaceMapViewController.m in Sources */,
 				C969E8AE1DF1C9E000E1DF67 /* Journey.xcdatamodeld in Sources */,
 				C90959321DF592F900271D25 /* CreateNewTrip1ViewController.m in Sources */,
 				C90959181DF53A1600271D25 /* DayCollectionViewCell.m in Sources */,
 				C909592F1DF587C900271D25 /* TripUICollectionViewController.m in Sources */,
 				C969E8BD1DF1D94B00E1DF67 /* TripCollectionViewCell.m in Sources */,
+				C9A8E5E11DF67EA80011279A /* PlaceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

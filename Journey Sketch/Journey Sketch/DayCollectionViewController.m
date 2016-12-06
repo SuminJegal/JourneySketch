@@ -30,9 +30,9 @@ static NSString * const reuseIdentifier = @"places";
     // Do any additional setup after loading the view.
 }
 
-//- (void)viewWillAppear:(BOOL)animated{
-//    [self.navigationController setNavigationBarHidden:YES];
-//}
+- (void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
