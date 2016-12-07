@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="565.60000000000002" y="80.50974512743629"/>
         </scene>
-        <!--Create New Trip1 View Controller-->
+        <!--Create New Trip View Controller-->
         <scene sceneID="wlh-C1-DOh">
             <objects>
-                <viewController storyboardIdentifier="newTrip" id="Ood-GE-7yw" customClass="CreateNewTrip1ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newTrip" id="Ood-GE-7yw" customClass="CreateNewTripViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wS9-Yz-fn7"/>
                         <viewControllerLayoutGuide type="bottom" id="MmU-uB-OSX"/>
@@ -241,7 +241,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ii5-A3-GtI">
-                                <frame key="frameInset" minX="43.73%" minY="56.52%" width="12.53%" height="4.50%"/>
+                                <frame key="frameInset" minX="43.60%" minY="56.45%" width="12.53%" height="4.57%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="확인"/>
                                 <connections>
@@ -249,7 +249,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="여행 장소를 입력하세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPN-N9-Tfc">
-                                <frame key="frameInset" minX="24.53%" minY="38.83%" width="50.93%" height="3.15%"/>
+                                <frame key="frameInset" minX="24.40%" minY="38.76%" width="50.93%" height="3.22%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -279,18 +279,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oma-RW-r58">
-                                <frame key="frameInset" minX="4.27%" minY="3.00%" width="91.47%" height="30.73%"/>
+                                <frame key="frameInset" minX="4.27%" minY="3.00%" width="91.47%" height="30.66%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYl-Db-iwc">
-                                <frame key="frameInset" minX="4.27%" minY="34.93%" width="91.47%" height="7.20%"/>
+                                <frame key="frameInset" minX="4.27%" minY="34.86%" width="91.47%" height="7.27%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIC-Cv-euM">
-                                <frame key="frameInset" minX="4.27%" minY="51.72%" width="91.47%" height="13.49%"/>
+                                <frame key="frameInset" minX="4.27%" minY="51.65%" width="91.47%" height="13.49%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -392,6 +392,10 @@
         <scene sceneID="U1d-bf-H6I">
             <objects>
                 <viewController id="0dk-ck-xVQ" customClass="PlaceMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="989-ax-5IW"/>
+                        <viewControllerLayoutGuide type="bottom" id="BoA-eR-722"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="v7u-1r-NMv">
                         <rect key="frame" x="0.0" y="0.0" width="343" height="193"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -407,7 +411,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yxc-3P-g2R" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uec-ym-dJz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Uec-ym-dJz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

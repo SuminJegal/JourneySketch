@@ -11,10 +11,17 @@
 		C90959181DF53A1600271D25 /* DayCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C90959171DF53A1600271D25 /* DayCollectionViewCell.m */; };
 		C909591B1DF53A3800271D25 /* DayCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C909591A1DF53A3800271D25 /* DayCollectionReusableView.m */; };
 		C909592F1DF587C900271D25 /* TripUICollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C909592D1DF587C900271D25 /* TripUICollectionViewController.m */; };
-		C90959321DF592F900271D25 /* CreateNewTrip1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C90959311DF592F900271D25 /* CreateNewTrip1ViewController.m */; };
 		C909593F1DF59AED00271D25 /* StartPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C909593E1DF59AED00271D25 /* StartPlaceViewController.m */; };
 		C90959411DF5A07E00271D25 /* historically-1757930_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C90959401DF5A07E00271D25 /* historically-1757930_1280.jpg */; };
 		C90959451DF5B47300271D25 /* startImage.png in Resources */ = {isa = PBXBuildFile; fileRef = C90959441DF5B47300271D25 /* startImage.png */; };
+		C91869A21DF7F958001A6AC2 /* CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C91869A11DF7F958001A6AC2 /* CoreDataClass.m */; };
+		C91869CC1DF80B16001A6AC2 /* Place+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C91869C11DF80B16001A6AC2 /* Place+CoreDataClass.m */; };
+		C91869CD1DF80B16001A6AC2 /* Place+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C91869C31DF80B16001A6AC2 /* Place+CoreDataProperties.m */; };
+		C91869CE1DF80B16001A6AC2 /* Date+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C91869C51DF80B16001A6AC2 /* Date+CoreDataClass.m */; };
+		C91869CF1DF80B16001A6AC2 /* Date+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C91869C71DF80B16001A6AC2 /* Date+CoreDataProperties.m */; };
+		C91869D01DF80B16001A6AC2 /* Trip+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C91869C91DF80B16001A6AC2 /* Trip+CoreDataClass.m */; };
+		C9186A161DF840B3001A6AC2 /* Trip+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C9186A151DF840B3001A6AC2 /* Trip+CoreDataProperties.m */; };
+		C9186A1C1DF8498E001A6AC2 /* CreateNewTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9186A1B1DF8498E001A6AC2 /* CreateNewTripViewController.m */; };
 		C91BDE331DF035A700379814 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91BDE321DF035A700379814 /* CoreLocation.framework */; };
 		C969E8AE1DF1C9E000E1DF67 /* Journey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C969E8AC1DF1C9E000E1DF67 /* Journey.xcdatamodeld */; };
 		C969E8B41DF1CD5200E1DF67 /* clouds-1845097_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C969E8B31DF1CD5200E1DF67 /* clouds-1845097_1280.jpg */; };
@@ -59,12 +66,27 @@
 		C909591A1DF53A3800271D25 /* DayCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DayCollectionReusableView.m; path = "Journey Sketch/DayCollectionReusableView.m"; sourceTree = "<group>"; };
 		C909592D1DF587C900271D25 /* TripUICollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripUICollectionViewController.m; sourceTree = "<group>"; };
 		C909592E1DF587C900271D25 /* TripUICollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripUICollectionViewController.h; sourceTree = "<group>"; };
-		C90959301DF592F900271D25 /* CreateNewTrip1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateNewTrip1ViewController.h; sourceTree = "<group>"; };
-		C90959311DF592F900271D25 /* CreateNewTrip1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateNewTrip1ViewController.m; sourceTree = "<group>"; };
 		C909593D1DF59AED00271D25 /* StartPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartPlaceViewController.h; sourceTree = "<group>"; };
 		C909593E1DF59AED00271D25 /* StartPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartPlaceViewController.m; sourceTree = "<group>"; };
 		C90959401DF5A07E00271D25 /* historically-1757930_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "historically-1757930_1280.jpg"; sourceTree = "<group>"; };
 		C90959441DF5B47300271D25 /* startImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startImage.png; sourceTree = "<group>"; };
+		C91869A01DF7F958001A6AC2 /* CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataClass.h; sourceTree = "<group>"; };
+		C91869A11DF7F958001A6AC2 /* CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataClass.m; sourceTree = "<group>"; };
+		C91869A31DF7FE45001A6AC2 /* Journey Sketch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Journey Sketch-Bridging-Header.h"; sourceTree = "<group>"; };
+		C91869C01DF80B16001A6AC2 /* Place+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Place+CoreDataClass.h"; path = "../Place+CoreDataClass.h"; sourceTree = "<group>"; };
+		C91869C11DF80B16001A6AC2 /* Place+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Place+CoreDataClass.m"; path = "../Place+CoreDataClass.m"; sourceTree = "<group>"; };
+		C91869C21DF80B16001A6AC2 /* Place+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Place+CoreDataProperties.h"; path = "../Place+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C91869C31DF80B16001A6AC2 /* Place+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Place+CoreDataProperties.m"; path = "../Place+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C91869C41DF80B16001A6AC2 /* Date+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Date+CoreDataClass.h"; path = "../Date+CoreDataClass.h"; sourceTree = "<group>"; };
+		C91869C51DF80B16001A6AC2 /* Date+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Date+CoreDataClass.m"; path = "../Date+CoreDataClass.m"; sourceTree = "<group>"; };
+		C91869C61DF80B16001A6AC2 /* Date+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Date+CoreDataProperties.h"; path = "../Date+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C91869C71DF80B16001A6AC2 /* Date+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Date+CoreDataProperties.m"; path = "../Date+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C91869C81DF80B16001A6AC2 /* Trip+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Trip+CoreDataClass.h"; path = "../Trip+CoreDataClass.h"; sourceTree = "<group>"; };
+		C91869C91DF80B16001A6AC2 /* Trip+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Trip+CoreDataClass.m"; path = "../Trip+CoreDataClass.m"; sourceTree = "<group>"; };
+		C9186A141DF840B3001A6AC2 /* Trip+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Trip+CoreDataProperties.h"; path = "../Trip+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C9186A151DF840B3001A6AC2 /* Trip+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Trip+CoreDataProperties.m"; path = "../Trip+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C9186A1A1DF8498E001A6AC2 /* CreateNewTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateNewTripViewController.h; sourceTree = "<group>"; };
+		C9186A1B1DF8498E001A6AC2 /* CreateNewTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateNewTripViewController.m; sourceTree = "<group>"; };
 		C91BDE321DF035A700379814 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C969E8AD1DF1C9E000E1DF67 /* Journey.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Journey.xcdatamodel; sourceTree = "<group>"; };
 		C969E8B31DF1CD5200E1DF67 /* clouds-1845097_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "clouds-1845097_1280.jpg"; sourceTree = "<group>"; };
@@ -161,8 +183,8 @@
 			children = (
 				C969E8BB1DF1D94B00E1DF67 /* TripCollectionViewCell.h */,
 				C969E8BC1DF1D94B00E1DF67 /* TripCollectionViewCell.m */,
-				C909592D1DF587C900271D25 /* TripUICollectionViewController.m */,
 				C909592E1DF587C900271D25 /* TripUICollectionViewController.h */,
+				C909592D1DF587C900271D25 /* TripUICollectionViewController.m */,
 			);
 			name = Trip;
 			sourceTree = "<group>";
@@ -170,12 +192,31 @@
 		C90959331DF5930800271D25 /* addNewTrip */ = {
 			isa = PBXGroup;
 			children = (
-				C90959301DF592F900271D25 /* CreateNewTrip1ViewController.h */,
-				C90959311DF592F900271D25 /* CreateNewTrip1ViewController.m */,
-				C909593D1DF59AED00271D25 /* StartPlaceViewController.h */,
-				C909593E1DF59AED00271D25 /* StartPlaceViewController.m */,
+				C9186A1A1DF8498E001A6AC2 /* CreateNewTripViewController.h */,
+				C9186A1B1DF8498E001A6AC2 /* CreateNewTripViewController.m */,
 			);
 			name = addNewTrip;
+			sourceTree = "<group>";
+		};
+		C918699F1DF7F958001A6AC2 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C91869A01DF7F958001A6AC2 /* CoreDataClass.h */,
+				C91869A11DF7F958001A6AC2 /* CoreDataClass.m */,
+				C91869C01DF80B16001A6AC2 /* Place+CoreDataClass.h */,
+				C91869C11DF80B16001A6AC2 /* Place+CoreDataClass.m */,
+				C91869C21DF80B16001A6AC2 /* Place+CoreDataProperties.h */,
+				C91869C31DF80B16001A6AC2 /* Place+CoreDataProperties.m */,
+				C91869C41DF80B16001A6AC2 /* Date+CoreDataClass.h */,
+				C91869C51DF80B16001A6AC2 /* Date+CoreDataClass.m */,
+				C91869C61DF80B16001A6AC2 /* Date+CoreDataProperties.h */,
+				C91869C71DF80B16001A6AC2 /* Date+CoreDataProperties.m */,
+				C91869C81DF80B16001A6AC2 /* Trip+CoreDataClass.h */,
+				C91869C91DF80B16001A6AC2 /* Trip+CoreDataClass.m */,
+				C9186A141DF840B3001A6AC2 /* Trip+CoreDataProperties.h */,
+				C9186A151DF840B3001A6AC2 /* Trip+CoreDataProperties.m */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		C969E8B21DF1CD5200E1DF67 /* Image */ = {
@@ -195,6 +236,8 @@
 				C9A8E5E01DF67EA80011279A /* PlaceViewController.m */,
 				C9A8E5E21DF685C20011279A /* PlaceMapViewController.h */,
 				C9A8E5E31DF685C20011279A /* PlaceMapViewController.m */,
+				C909593D1DF59AED00271D25 /* StartPlaceViewController.h */,
+				C909593E1DF59AED00271D25 /* StartPlaceViewController.m */,
 			);
 			name = Place;
 			sourceTree = "<group>";
@@ -227,6 +270,7 @@
 				C969E8B21DF1CD5200E1DF67 /* Image */,
 				C969E8AC1DF1C9E000E1DF67 /* Journey.xcdatamodeld */,
 				C9C111F21DBDF9D200503177 /* Main.storyboard */,
+				C918699F1DF7F958001A6AC2 /* CoreData */,
 				C909592C1DF5856000271D25 /* Trip */,
 				C909592B1DF5853000271D25 /* Day */,
 				C90959331DF5930800271D25 /* addNewTrip */,
@@ -241,6 +285,7 @@
 				C9C111F71DBDF9D200503177 /* LaunchScreen.storyboard */,
 				C9C111FA1DBDF9D200503177 /* Info.plist */,
 				C9C111E91DBDF9D200503177 /* Supporting Files */,
+				C91869A31DF7FE45001A6AC2 /* Journey Sketch-Bridging-Header.h */,
 			);
 			path = "Journey Sketch";
 			sourceTree = "<group>";
@@ -342,6 +387,7 @@
 					C9C111E51DBDF9D200503177 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 3N2B4ECPAU;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					C9C111FE1DBDF9D200503177 = {
@@ -461,6 +507,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91869CD1DF80B16001A6AC2 /* Place+CoreDataProperties.m in Sources */,
+				C91869CE1DF80B16001A6AC2 /* Date+CoreDataClass.m in Sources */,
 				C9C111F11DBDF9D200503177 /* ViewController.m in Sources */,
 				C969E8BA1DF1D43B00E1DF67 /* DayCollectionViewController.m in Sources */,
 				C9C111EE1DBDF9D200503177 /* AppDelegate.m in Sources */,
@@ -468,12 +516,17 @@
 				C9C111EB1DBDF9D200503177 /* main.m in Sources */,
 				C9F9BA211DF160B600F8B2B2 /* PageViewController.m in Sources */,
 				C909591B1DF53A3800271D25 /* DayCollectionReusableView.m in Sources */,
+				C91869CF1DF80B16001A6AC2 /* Date+CoreDataProperties.m in Sources */,
+				C91869D01DF80B16001A6AC2 /* Trip+CoreDataClass.m in Sources */,
+				C9186A161DF840B3001A6AC2 /* Trip+CoreDataProperties.m in Sources */,
 				C9A8E5E41DF685C20011279A /* PlaceMapViewController.m in Sources */,
 				C969E8AE1DF1C9E000E1DF67 /* Journey.xcdatamodeld in Sources */,
-				C90959321DF592F900271D25 /* CreateNewTrip1ViewController.m in Sources */,
+				C91869CC1DF80B16001A6AC2 /* Place+CoreDataClass.m in Sources */,
 				C90959181DF53A1600271D25 /* DayCollectionViewCell.m in Sources */,
 				C909592F1DF587C900271D25 /* TripUICollectionViewController.m in Sources */,
+				C9186A1C1DF8498E001A6AC2 /* CreateNewTripViewController.m in Sources */,
 				C969E8BD1DF1D94B00E1DF67 /* TripCollectionViewCell.m in Sources */,
+				C91869A21DF7F958001A6AC2 /* CoreDataClass.m in Sources */,
 				C9A8E5E11DF67EA80011279A /* PlaceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -624,11 +677,15 @@
 			baseConfigurationReference = EFA8687ABDC97327C65B089D /* Pods-Journey Sketch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3N2B4ECPAU;
 				INFOPLIST_FILE = "Journey Sketch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cnu.ac.kr.Journey-Sketch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Journey Sketch/Journey Sketch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -637,11 +694,14 @@
 			baseConfigurationReference = 21D1C6F82E94EC43977A8F71 /* Pods-Journey Sketch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3N2B4ECPAU;
 				INFOPLIST_FILE = "Journey Sketch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cnu.ac.kr.Journey-Sketch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Journey Sketch/Journey Sketch-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

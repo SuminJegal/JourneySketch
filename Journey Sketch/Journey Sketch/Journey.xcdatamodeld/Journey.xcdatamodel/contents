@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G1004" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Date" syncable="YES">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G1004" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Date" representedClassName=".Date" syncable="YES">
         <attribute name="nextday" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="today" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="dayHavePlace" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Place" inverseName="dayHavePlace" inverseEntity="Place" syncable="YES"/>
+        <relationship name="tripHaveDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="tripHaveDate" inverseEntity="Trip" syncable="YES"/>
     </entity>
-    <entity name="Place" syncable="YES">
+    <entity name="Place" representedClassName=".Place" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="attribution" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="placeID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dayHavePlace" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Date" inverseName="dayHavePlace" inverseEntity="Date" syncable="YES"/>
     </entity>
-    <entity name="Trip" syncable="YES">
-        <attribute name="tripNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    <entity name="Trip" representedClassName=".Trip" syncable="YES">
+        <attribute name="tripNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tripHaveDate" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Date" inverseName="tripHaveDate" inverseEntity="Date" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Date" positionX="-198" positionY="161" width="108" height="73"/>
-        <element name="Place" positionX="-54" positionY="9" width="128" height="103"/>
-        <element name="Trip" positionX="-261" positionY="20" width="128" height="43"/>
+        <element name="Date" positionX="-171" positionY="9" width="108" height="103"/>
+        <element name="Place" positionX="-182" positionY="153" width="128" height="118"/>
+        <element name="Trip" positionX="-182" positionY="-126" width="128" height="73"/>
     </elements>
 </model>

@@ -7,6 +7,7 @@
 //
 
 #import "StartPlaceViewController.h"
+#import "CoreDataClass.h"
 
 @interface StartPlaceViewController () 
 

@@ -7,6 +7,7 @@
 //
 
 #import "PlaceViewController.h"
+#import "CoreDataClass.h"
 
 @interface PlaceViewController ()
 

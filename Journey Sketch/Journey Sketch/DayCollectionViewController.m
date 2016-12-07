@@ -8,6 +8,7 @@
 
 #import "DayCollectionViewController.h"
 #import "DayCollectionViewCell.h"
+#import "CoreDataClass.h"
 
 @interface DayCollectionViewController ()
 

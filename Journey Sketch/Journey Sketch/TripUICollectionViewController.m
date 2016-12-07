@@ -8,8 +8,11 @@
 
 #import "TripUICollectionViewController.h"
 #import "TripCollectionViewCell.h"
+#import "CoreDataClass.h"
 
 @interface TripUICollectionViewController ()
+@property CoreDataClass * coreData;
+@property NSArray * tripData;
 
 @end
 
@@ -17,9 +20,12 @@
 
 static NSString * const reuseIdentifier = @"eachTrip";
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.coreData =  [[CoreDataClass alloc] init];
+    self.tripData = [self.coreData getAllEntityDataWithEntity:@"Trip"];
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -54,7 +60,7 @@ static NSString * const reuseIdentifier = @"eachTrip";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of items
-    return 2;
+    return [self.tripData count]+1;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -65,11 +71,11 @@ static NSString * const reuseIdentifier = @"eachTrip";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     TripCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    if(indexPath.row == 1){
+    if(indexPath.row == [self.tripData count]){
         [cell.label setText:@"새로운 여행"];
         [cell.image setImage:[UIImage imageNamed:@"clouds-1845097_1280.jpg"]];
     }else{
-        [cell.label setText:[NSString stringWithFormat:@"%d cell", indexPath.row]];
+        [cell.label setText:[NSString stringWithFormat:@"%dth Journey", indexPath.row+1]];
     }
     
     // Configure the cell
@@ -81,7 +87,7 @@ static NSString * const reuseIdentifier = @"eachTrip";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    if(indexPath.row == 1){
+    if(indexPath.row == [self.tripData count]){
         UIViewController* view = [self.storyboard instantiateViewControllerWithIdentifier:@"newTrip"];
         
         [self.navigationController pushViewController:view animated:YES];

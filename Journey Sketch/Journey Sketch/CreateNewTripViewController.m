@@ -1,21 +1,23 @@
 //
-//  CreateNewTrip1ViewController.m
+//  CreateNewTripViewController.m
 //  Journey Sketch
 //
-//  Created by 제갈수민 on 2016. 12. 3..
+//  Created by 제갈수민 on 2016. 12. 7..
 //  Copyright © 2016년 제갈수민. All rights reserved.
 //
 
-#import "CreateNewTrip1ViewController.h"
+#import "CreateNewTripViewController.h"
+#import "CoreDataClass.h"
 
-@interface CreateNewTrip1ViewController ()
-
+@interface CreateNewTripViewController ()
+@property CoreDataClass * coreData;
 @end
 
-@implementation CreateNewTrip1ViewController
+@implementation CreateNewTripViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.coreData =  [[CoreDataClass alloc] init];
     // Do any additional setup after loading the view.
 }
 
@@ -33,5 +35,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [self.coreData createOneEntity:@"Trip"];
+    [self.coreData createOneEntity:@"Date"];    
+}
 
 @end
