@@ -23,6 +23,7 @@
     return YES;
 }
 
+
 - (NSUInteger)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskPortrait;
@@ -35,6 +36,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [self.startImage setImage:[UIImage imageNamed:@"startImage.png"]];
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 

@@ -9,6 +9,7 @@
 #import "TripUICollectionViewController.h"
 #import "TripCollectionViewCell.h"
 #import "CoreDataClass.h"
+#import "Trip+CoreDataClass.h"
 
 @interface TripUICollectionViewController ()
 @property CoreDataClass * coreData;
@@ -73,9 +74,12 @@ static NSString * const reuseIdentifier = @"eachTrip";
     
     if(indexPath.row == [self.tripData count]){
         [cell.label setText:@"새로운 여행"];
+        [cell.subLabel setText:@"눌러서 새로운 여행을 시작하세요"];
         [cell.image setImage:[UIImage imageNamed:@"clouds-1845097_1280.jpg"]];
     }else{
         [cell.label setText:[NSString stringWithFormat:@"%dth Journey", indexPath.row+1]];
+        Trip * trip = [self.tripData objectAtIndex:indexPath.row];
+        [cell.subLabel setText:trip.tripNumber];
     }
     
     // Configure the cell

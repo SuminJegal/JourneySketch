@@ -10,6 +10,7 @@
 #import "CoreDataClass.h"
 
 @interface CreateNewTripViewController ()
+@property (weak, nonatomic) IBOutlet UIDatePicker *startDate;
 @property CoreDataClass * coreData;
 @end
 
@@ -18,12 +19,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.coreData =  [[CoreDataClass alloc] init];
+    //self.startDate = [[UIDatePicker alloc]init];
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 /*
@@ -37,8 +43,17 @@
 */
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    [self.coreData createOneEntity:@"Trip"];
-    [self.coreData createOneEntity:@"Date"];    
+    NSString * today = [self getStringFromDate:[self.startDate date]];
+    NSString * tommorow = [self getStringFromDate:[[self.startDate date] dateByAddingTimeInterval:24*60*60]];
+    [self.coreData setNewDateInNewTrip:today withNextDay:tommorow];
+   
+}
+
+-(NSString *)getStringFromDate:(NSDate *)date{
+    NSDateFormatter *dataformatter = [[NSDateFormatter alloc]init];
+    [dataformatter setDateFormat:@"yyyy.MM.dd"];
+    NSString * string = [dataformatter stringFromDate:date];
+    return string;
 }
 
 @end

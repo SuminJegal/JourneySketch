@@ -281,9 +281,62 @@
     [newAttribue setValue:value forKey:attribute];
     
     [dataContext save:&error];
+
     
 //    NSLog(@"Saved");
 }
+
+/*
+ * 기능 : 특정 엔터티에 원하는 값 두개를 저장한다
+ * 파라메터 : 저장하고 싶은 필드값1(NSString), 저장할 값1(NSNumber), 저장 할 엔터티 이름(NSString), 저장하고 싶은 필드값2(NSString), 저장할 값2(NSNumber)
+ * 반환값 : 없음
+ */
+- (void)setTwoDataWithAttribute:(NSString *)attribute inValue:(NSString *)value inEntity:(NSString *)entityForName WithOtherAttribute:(NSString *)otherAttribute inOtherValue:(NSString *)otherValue
+{
+    // 저장을 원하는 Entity를 받아온다
+    NSManagedObject* newAttribue = [NSEntityDescription insertNewObjectForEntityForName:entityForName inManagedObjectContext:dataContext];
+    
+    NSError* error;
+    
+    // 받아온 Entity중 원하는 key값에 해당하는 새로운 value를 설정한다
+    [newAttribue setValue:value forKey:attribute];
+    [newAttribue setValue:otherValue forKey:otherAttribute];
+    
+    [dataContext save:&error];
+    
+    
+    //    NSLog(@"Saved");
+}
+
+/*
+ * 기능 : Date에 여행시작 날짜에 대한 값을 넣고 해당 Date를 가지고 있는 Trip만들기
+ * 파라메터 : 저장하고 싶은 날짜(NSDate)
+ * 반환값 : 없음
+ */
+- (void)setNewDateInNewTrip:(NSString *)date withNextDay:nextDate
+{
+    NSManagedObject* newDateAttribute = [NSEntityDescription insertNewObjectForEntityForName:@"Date" inManagedObjectContext:dataContext];
+    
+    NSError* error;
+    
+    [newDateAttribute setValue:date forKey:@"today"];
+    [newDateAttribute setValue:nextDate forKey:@"nextday"];
+    [newDateAttribute setValue:NO forKey:@"hasNext"];
+    
+    NSManagedObject* newTripAttribute = [NSEntityDescription insertNewObjectForEntityForName:@"Trip" inManagedObjectContext:dataContext];
+    
+    [newTripAttribute setValue:date forKey:@"tripNumber"];
+    
+    
+    Trip* trip_instance = (Trip*)[self getOneDataWithAttribute:@"tripNumber" inStringValue:date inEntity:@"Trip"];
+    if(trip_instance){
+        [trip_instance addTripHaveDateObject:(Date*)newDateAttribute];
+    }
+    [dataContext save:&error];
+    
+}
+
+
 ///*
 // * 기능 : 오늘 날짜에 아침, 점심, 저녁, 야식 엔터티(Entity)중 한 엔터티에 음식을 저장한다
 // * 파라메터 : 저장할 음식의 ID(NSNumber), 저장할 엔터티 이름(NSString)

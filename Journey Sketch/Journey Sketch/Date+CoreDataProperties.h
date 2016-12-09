@@ -2,7 +2,7 @@
 //  Date+CoreDataProperties.h
 //  Journey Sketch
 //
-//  Created by 제갈수민 on 2016. 12. 7..
+//  Created by 제갈수민 on 2016. 12. 8..
 //  Copyright © 2016년 제갈수민. All rights reserved.
 //
 
@@ -15,8 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<Date *> *)fetchRequest;
 
-@property (nullable, nonatomic, copy) NSDate *nextday;
-@property (nullable, nonatomic, copy) NSDate *today;
+@property (nullable, nonatomic, copy) NSString *nextday;
+@property (nullable, nonatomic, copy) NSString *today;
+@property (nonatomic) BOOL hasNext;
 @property (nullable, nonatomic, retain) NSSet<Place *> *dayHavePlace;
 @property (nullable, nonatomic, retain) Trip *tripHaveDate;
 

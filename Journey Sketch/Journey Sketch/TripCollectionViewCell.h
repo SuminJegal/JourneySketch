@@ -11,5 +11,6 @@
 @interface TripCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UILabel *subLabel;
 
 @end

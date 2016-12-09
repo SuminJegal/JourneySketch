@@ -11,6 +11,10 @@
 
 @interface StartPlaceViewController () 
 
+@property NSString * placeName;
+@property NSString * placeAddress;
+@property NSString * placeAttribution;
+
 @property UISearchController *searchController;
 @property GMSAutocompleteResultsViewController *resultsViewController;
 
@@ -18,22 +22,22 @@
 
 @implementation StartPlaceViewController
 
-// Handle the user's selection.
-- (void)viewController:(GMSAutocompleteViewController *)viewController
-didAutocompleteWithPlace:(GMSPlace *)place {
-    [self dismissViewControllerAnimated:YES completion:nil];
-    // Do something with the selected place.
-    NSLog(@"Place name %@", place.name);
-    NSLog(@"Place address %@", place.formattedAddress);
-    NSLog(@"Place attributions %@", place.attributions.string);
-}
-
-- (void)viewController:(GMSAutocompleteViewController *)viewController
-didFailAutocompleteWithError:(NSError *)error {
-    [self dismissViewControllerAnimated:YES completion:nil];
-    // TODO: handle the error.
-    NSLog(@"Error: %@", [error description]);
-}
+//// Handle the user's selection.
+//- (void)viewController:(GMSAutocompleteViewController *)viewController
+//didAutocompleteWithPlace:(GMSPlace *)place {
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//    // Do something with the selected place.
+//    NSLog(@"Place name %@", place.name);
+//    NSLog(@"Place address %@", place.formattedAddress);
+//    NSLog(@"Place attributions %@", place.attributions.string);
+//}
+//
+//- (void)viewController:(GMSAutocompleteViewController *)viewController
+//didFailAutocompleteWithError:(NSError *)error {
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//    // TODO: handle the error.
+//    NSLog(@"Error: %@", [error description]);
+//}
 
 // User canceled the operation.
 - (void)wasCancelled:(GMSAutocompleteViewController *)viewController {
@@ -65,7 +69,7 @@ didFailAutocompleteWithError:(NSError *)error {
     [subView addSubview:_searchController.searchBar];
     [_searchController.searchBar sizeToFit];
     [self.view addSubview:subView];
-    [self.background setImage:[UIImage imageNamed:@"startImage.png"]];
+    [self.background setImage:[UIImage imageNamed:@"searchPlace.jpg"]];
     // When UISearchController presents the results view, present it in
     // this view controller, not one further up the chain.
     self.definesPresentationContext = YES;
@@ -75,10 +79,14 @@ didFailAutocompleteWithError:(NSError *)error {
 - (void)resultsController:(GMSAutocompleteResultsViewController *)resultsController
  didAutocompleteWithPlace:(GMSPlace *)place {
     [self dismissViewControllerAnimated:YES completion:nil];
+    [_searchController.searchBar setText:place.name];
     // Do something with the selected place
     NSLog(@"Place name %@", place.name);
     NSLog(@"Place address %@", place.formattedAddress);
     NSLog(@"Place attributions %@", place.attributions.string);
+    NSLog(@"Place coordinate latitude %f", place.coordinate.latitude);
+    NSLog(@"Place coordinate longitude %f", place.coordinate.longitude);
+    
 }
 
 - (void)resultsController:(GMSAutocompleteResultsViewController *)resultsController

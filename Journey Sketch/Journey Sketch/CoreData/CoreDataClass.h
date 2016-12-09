@@ -77,6 +77,18 @@
 // * 반환값 : 없음
 // */
 - (void)setOneDataWithAttribute:(NSString*)attribute inValue:(NSString*)value inEntity:(NSString*)entityForName;
+/*
+ * 기능 : 특정 엔터티에 원하는 값 두개를 저장한다
+ * 파라메터 : 저장하고 싶은 필드값1(NSString), 저장할 값1(NSNumber), 저장 할 엔터티 이름(NSString), 저장하고 싶은 필드값2(NSString), 저장할 값2(NSNumber)
+ * 반환값 : 없음
+ */
+- (void)setTwoDataWithAttribute:(NSString *)attribute inValue:(NSString *)value inEntity:(NSString *)entityForName WithOtherAttribute:(NSString *)otherAttribute inOtherValue:(NSString *)otherValue;
+/*
+ * 기능 : Date에 여행시작 날짜에 대한 값을 넣고 해당 Date를 가지고 있는 Trip만들기
+ * 파라메터 : 저장하고 싶은 날짜(NSDate)
+ * 반환값 : 없음
+ */
+- (void)setNewDateInNewTrip:(NSString *)date withNextDay:nextDate;
 //
 //
 ///*
