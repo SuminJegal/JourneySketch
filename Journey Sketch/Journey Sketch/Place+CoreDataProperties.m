@@ -2,7 +2,7 @@
 //  Place+CoreDataProperties.m
 //  Journey Sketch
 //
-//  Created by 제갈수민 on 2016. 12. 9..
+//  Created by 제갈수민 on 2016. 12. 11..
 //  Copyright © 2016년 제갈수민. All rights reserved.
 //
 
@@ -16,10 +16,11 @@
 
 @dynamic address;
 @dynamic attribution;
+@dynamic latitude;
+@dynamic longitude;
 @dynamic name;
 @dynamic placeID;
-@dynamic longitude;
-@dynamic latitude;
+@dynamic day;
 @dynamic dayHavePlace;
 
 @end

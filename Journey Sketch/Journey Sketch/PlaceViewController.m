@@ -10,7 +10,7 @@
 #import "CoreDataClass.h"
 
 @interface PlaceViewController ()
-
+@property NSString * currentPushDay;
 @end
 
 @implementation PlaceViewController

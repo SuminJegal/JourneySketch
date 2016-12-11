@@ -38,6 +38,7 @@
 		C9C111F91DBDF9D200503177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C111F71DBDF9D200503177 /* LaunchScreen.storyboard */; };
 		C9C112041DBDF9D200503177 /* Journey_SketchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C112031DBDF9D200503177 /* Journey_SketchTests.m */; };
 		C9C1120F1DBDF9D200503177 /* Journey_SketchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1120E1DBDF9D200503177 /* Journey_SketchUITests.m */; };
+		C9F8E1701DFD2C5400CA2634 /* CreateTripToDayNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F8E16F1DFD2C5400CA2634 /* CreateTripToDayNavigationViewController.m */; };
 		C9F9BA211DF160B600F8B2B2 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F9BA201DF160B600F8B2B2 /* PageViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,8 @@
 		C9C1120A1DBDF9D200503177 /* Journey SketchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Journey SketchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C1120E1DBDF9D200503177 /* Journey_SketchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Journey_SketchUITests.m; sourceTree = "<group>"; };
 		C9C112101DBDF9D200503177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9F8E16E1DFD2C5400CA2634 /* CreateTripToDayNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateTripToDayNavigationViewController.h; sourceTree = "<group>"; };
+		C9F8E16F1DFD2C5400CA2634 /* CreateTripToDayNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateTripToDayNavigationViewController.m; sourceTree = "<group>"; };
 		C9F9BA1F1DF160B600F8B2B2 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		C9F9BA201DF160B600F8B2B2 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		EFA8687ABDC97327C65B089D /* Pods-Journey Sketch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Journey Sketch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Journey Sketch/Pods-Journey Sketch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 			children = (
 				C9186A1A1DF8498E001A6AC2 /* CreateNewTripViewController.h */,
 				C9186A1B1DF8498E001A6AC2 /* CreateNewTripViewController.m */,
+				C9F8E16E1DFD2C5400CA2634 /* CreateTripToDayNavigationViewController.h */,
+				C9F8E16F1DFD2C5400CA2634 /* CreateTripToDayNavigationViewController.m */,
 			);
 			name = addNewTrip;
 			sourceTree = "<group>";
@@ -518,6 +523,7 @@
 				C9C111EE1DBDF9D200503177 /* AppDelegate.m in Sources */,
 				C909593F1DF59AED00271D25 /* StartPlaceViewController.m in Sources */,
 				C9C111EB1DBDF9D200503177 /* main.m in Sources */,
+				C9F8E1701DFD2C5400CA2634 /* CreateTripToDayNavigationViewController.m in Sources */,
 				C9F9BA211DF160B600F8B2B2 /* PageViewController.m in Sources */,
 				C909591B1DF53A3800271D25 /* DayCollectionReusableView.m in Sources */,
 				C91869CF1DF80B16001A6AC2 /* Date+CoreDataProperties.m in Sources */,

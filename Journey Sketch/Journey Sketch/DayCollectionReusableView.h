@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DayCollectionReusableView : UICollectionReusableView
-
+@property (weak, nonatomic) IBOutlet UILabel *day;
 @end

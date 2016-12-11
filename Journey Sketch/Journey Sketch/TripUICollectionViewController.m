@@ -14,7 +14,7 @@
 @interface TripUICollectionViewController ()
 @property CoreDataClass * coreData;
 @property NSArray * tripData;
-
+@property NSString * currentPushDay;
 @end
 
 @implementation TripUICollectionViewController
@@ -77,7 +77,7 @@ static NSString * const reuseIdentifier = @"eachTrip";
         [cell.subLabel setText:@"눌러서 새로운 여행을 시작하세요"];
         [cell.image setImage:[UIImage imageNamed:@"clouds-1845097_1280.jpg"]];
     }else{
-        [cell.label setText:[NSString stringWithFormat:@"%dth Journey", indexPath.row+1]];
+        [cell.label setText:[NSString stringWithFormat:@"%d번째 여행", indexPath.row+1]];
         Trip * trip = [self.tripData objectAtIndex:indexPath.row];
         [cell.subLabel setText:trip.tripNumber];
     }
@@ -98,7 +98,11 @@ static NSString * const reuseIdentifier = @"eachTrip";
     }else{
         UIViewController* view = [self.storyboard instantiateViewControllerWithIdentifier:@"dayView"];
         
+        Trip * trip_instance = [self.tripData objectAtIndex:indexPath.row];
+        NSString * currentPushDay = trip_instance.tripNumber;
+        [view setValue:currentPushDay forKey:@"currentPushDay"];
         [self.navigationController pushViewController:view animated:YES];
+        
     }
 }
 

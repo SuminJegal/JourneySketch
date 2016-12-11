@@ -46,7 +46,11 @@
     NSString * today = [self getStringFromDate:[self.startDate date]];
     NSString * tommorow = [self getStringFromDate:[[self.startDate date] dateByAddingTimeInterval:24*60*60]];
     [self.coreData setNewDateInNewTrip:today withNextDay:tommorow];
-   
+    if([segue.destinationViewController isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *ivc = (UINavigationController *)segue.destinationViewController;
+        UICollectionView *vc = (UICollectionView *)[ivc topViewController];
+        [vc setValue:today forKey:@"currentPushDay"];
+    }
 }
 
 -(NSString *)getStringFromDate:(NSDate *)date{

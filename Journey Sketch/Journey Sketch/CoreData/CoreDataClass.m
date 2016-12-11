@@ -310,10 +310,10 @@
 
 /*
  * 기능 : Date에 여행시작 날짜에 대한 값을 넣고 해당 Date를 가지고 있는 Trip만들기
- * 파라메터 : 저장하고 싶은 날짜(NSDate)
+ * 파라메터 : 저장하고 싶은 날짜(NSString)와 다음 날짜(NSString)
  * 반환값 : 없음
  */
-- (void)setNewDateInNewTrip:(NSString *)date withNextDay:nextDate
+- (void)setNewDateInNewTrip:(NSString *)date withNextDay:(NSString *)nextDate
 {
     NSManagedObject* newDateAttribute = [NSEntityDescription insertNewObjectForEntityForName:@"Date" inManagedObjectContext:dataContext];
     
@@ -335,6 +335,41 @@
     [dataContext save:&error];
     
 }
+
+
+/*
+ * 기능 : PlaceId, name, address, attribution, latitude, longitude을 받아 Place엔터티 만들기
+ * 파라메터 : PlaceId,name,address,attribution(NSString), latitude,longitude(double)
+ * 반환값 : 없음
+ */
+- (void)setPlaceIdInNewPlace:(NSString *)placeId withName:(NSString *)name withAddress:(NSString *)address withAttribution:(NSString *)attribution withLatitude:(double)latitude withLongitude:(double)longitude InDay:(NSString *)day
+{
+    Place * newPlaceAttribute = [NSEntityDescription insertNewObjectForEntityForName:@"Place" inManagedObjectContext:dataContext];
+    
+    NSError* error;
+    
+    NSNumber * temp_latitude = [NSNumber numberWithInt:latitude];
+    NSNumber * temp_longitude = [NSNumber numberWithInt:longitude];
+
+    [newPlaceAttribute setValue:placeId forKey:@"placeID"];
+    [newPlaceAttribute setValue:name forKey:@"name"];
+    [newPlaceAttribute setValue:address forKey:@"address"];
+    [newPlaceAttribute setValue:attribution forKey:@"attribution"];
+    [newPlaceAttribute setValue:temp_latitude forKey:@"latitude"];
+    [newPlaceAttribute setValue:temp_longitude forKey:@"longitude"];
+    [newPlaceAttribute setValue:day forKey:@"day"];
+
+    
+    Date * date_instance = (Date*)[self getOneDataWithAttribute:@"today" inStringValue:day inEntity:@"Date"];
+    
+    if(date_instance){
+        [date_instance addDayHavePlaceObject:(Place*)newPlaceAttribute];
+        newPlaceAttribute.dayHavePlace = date_instance;
+    }
+    [dataContext save:&error];
+    
+}
+
 
 
 ///*

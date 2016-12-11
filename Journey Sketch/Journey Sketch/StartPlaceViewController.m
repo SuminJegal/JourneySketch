@@ -7,13 +7,20 @@
 //
 
 #import "StartPlaceViewController.h"
+#import "DayCollectionViewController.h"
 #import "CoreDataClass.h"
 
 @interface StartPlaceViewController () 
 
+@property NSString * placeId;
 @property NSString * placeName;
 @property NSString * placeAddress;
 @property NSString * placeAttribution;
+@property double placeLatitude;
+@property double placeLongitude;
+@property NSString * currentPushDay;
+
+@property CoreDataClass * coreData;
 
 @property UISearchController *searchController;
 @property GMSAutocompleteResultsViewController *resultsViewController;
@@ -57,6 +64,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.coreData =  [[CoreDataClass alloc] init];
+    
     _resultsViewController = [[GMSAutocompleteResultsViewController alloc] init];
     [_resultsViewController setDelegate:self];
     
@@ -86,6 +95,12 @@
     NSLog(@"Place attributions %@", place.attributions.string);
     NSLog(@"Place coordinate latitude %f", place.coordinate.latitude);
     NSLog(@"Place coordinate longitude %f", place.coordinate.longitude);
+    self.placeId = place.placeID;
+    self.placeName = place.name;
+    self.placeAddress = place.formattedAddress;
+    self.placeAttribution = place.attributions;
+    self.placeLatitude = place.coordinate.longitude;
+    self.placeLongitude = place.coordinate.longitude;
     
 }
 
@@ -106,14 +121,17 @@ didFailAutocompleteWithError:(NSError *)error {
 (GMSAutocompleteResultsViewController *)resultsController {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [self.coreData setPlaceIdInNewPlace:self.placeId withName:self.placeName withAddress:self.placeAddress withAttribution:self.placeAttribution withLatitude:self.placeLatitude withLongitude:self.placeLongitude InDay:self.currentPushDay];
+    if([segue.destinationViewController isKindOfClass:[DayCollectionViewController class]]) {
+        DayCollectionViewController *ivc = (DayCollectionViewController *)segue.destinationViewController;
+        [ivc setValue:self.currentPushDay forKey:@"currentPushDay"];
+    }
 }
-*/
+
 
 @end

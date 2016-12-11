@@ -196,13 +196,6 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYx-r5-wCY">
-                                    <frame key="frameInset" minX="29.33%" minY="28.00%" width="37.07%" height="42.00%"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekX-Uh-KqJ">
                                     <frame key="frameInset" minX="89.87%" minY="24.00%" width="8.00%" height="60.00%"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -217,7 +210,17 @@
                                         <segue destination="yxc-3P-g2R" kind="show" id="xMS-LL-aRc"/>
                                     </connections>
                                 </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYx-r5-wCY">
+                                    <frame key="frameInset" minX="31.47%" minY="28.00%" width="37.07%" height="42.00%"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
+                            <connections>
+                                <outlet property="day" destination="KYx-r5-wCY" id="nv4-MU-DA9"/>
+                            </connections>
                         </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="Vae-y6-e9Y" id="CCx-Sn-30B"/>
@@ -393,10 +396,10 @@
             </objects>
             <point key="canvasLocation" x="3455.1999999999998" y="80.50974512743629"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Create Trip To Day Navigation View Controller-->
         <scene sceneID="ifH-cJ-vvz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EjH-VH-OkO" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EjH-VH-OkO" customClass="CreateTripToDayNavigationViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Kdo-JF-dqB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -452,7 +455,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cmu-CD-Cdz" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WQv-W6-R4I">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="WQv-W6-R4I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -467,7 +470,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OwB-dF-Tmx"/>
-        <segue reference="xLw-u4-wZt"/>
+        <segue reference="Wf3-VX-T5v"/>
+        <segue reference="xMS-LL-aRc"/>
     </inferredMetricsTieBreakers>
 </document>

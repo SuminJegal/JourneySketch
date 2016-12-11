@@ -89,6 +89,13 @@
  * 반환값 : 없음
  */
 - (void)setNewDateInNewTrip:(NSString *)date withNextDay:nextDate;
+
+/*
+ * 기능 : PlaceId, name, address, attribution, latitude, longitude을 받아 Place엔터티 만들기
+ * 파라메터 : PlaceId,name,address,attribution(NSString), latitude,longitude(double)
+ * 반환값 : 없음
+ */
+- (void)setPlaceIdInNewPlace:(NSString *)placeId withName:(NSString *)name withAddress:(NSString *)address withAttribution:(NSString *)attribution withLatitude:(double)latitude withLongitude:(double)longitude InDay:(NSString *)day;
 //
 //
 ///*

@@ -2,7 +2,7 @@
 //  Place+CoreDataProperties.h
 //  Journey Sketch
 //
-//  Created by 제갈수민 on 2016. 12. 9..
+//  Created by 제갈수민 on 2016. 12. 11..
 //  Copyright © 2016년 제갈수민. All rights reserved.
 //
 
@@ -17,10 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, copy) NSString *address;
 @property (nullable, nonatomic, copy) NSString *attribution;
+@property (nonatomic) double latitude;
+@property (nonatomic) double longitude;
 @property (nullable, nonatomic, copy) NSString *name;
 @property (nullable, nonatomic, copy) NSString *placeID;
-@property (nonatomic) double longitude;
-@property (nonatomic) double latitude;
+@property (nullable, nonatomic, copy) NSString *day;
 @property (nullable, nonatomic, retain) Date *dayHavePlace;
 
 @end

@@ -9,10 +9,12 @@
 #import "DayCollectionViewController.h"
 #import "DayCollectionViewCell.h"
 #import "CoreDataClass.h"
+#import "Place+CoreDataClass.h"
 
 @interface DayCollectionViewController ()
-
-
+@property CoreDataClass * coreData;
+@property NSArray * placeData;
+@property NSString * currentPushDay;
 @end
 
 @implementation DayCollectionViewController
@@ -21,7 +23,8 @@ static NSString * const reuseIdentifier = @"places";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.coreData =  [[CoreDataClass alloc] init];
+    self.placeData = [self.coreData getSomeDataWithAttribute:@"day" WithValue:self.currentPushDay inEntity:@"Place"];
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -63,7 +66,7 @@ static NSString * const reuseIdentifier = @"places";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of items
-    return 4;
+    return [self.placeData count]+1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -71,11 +74,12 @@ static NSString * const reuseIdentifier = @"places";
     
     
     
-    if(indexPath.row == 3){
+    if(indexPath.row == [self.placeData count]){
         [cell.label setText:@"New"];
         [cell.image setImage:[UIImage imageNamed:@"historically-1757930_1280.jpg"]];
     }else{
-        [cell.label setText:[NSString stringWithFormat:@"%d cell", indexPath.row]];
+        Place * place = [self.placeData objectAtIndex:indexPath.row];
+        [cell.label setText:place.name];
     }
     
     // Configure the cell
@@ -86,7 +90,7 @@ static NSString * const reuseIdentifier = @"places";
 -(UICollectionReusableView*)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     
     UICollectionReusableView* reuseView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"dayHeader" forIndexPath:indexPath];
-    
+    [reuseView setValue:self.currentPushDay forKey:@"day"];
     return reuseView;
     
 }
@@ -95,13 +99,15 @@ static NSString * const reuseIdentifier = @"places";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    if(indexPath.row == 3){
+    if(indexPath.row == [self.placeData count]){
         UIViewController* view = [self.storyboard instantiateViewControllerWithIdentifier:@"newPlace"];
         
+        [view setValue:self.currentPushDay forKey:@"currentPushDay"];
         [self.navigationController pushViewController:view animated:YES];
     }else{
         UIViewController* view = [self.storyboard instantiateViewControllerWithIdentifier:@"oldPlace"];
         
+        [view setValue:self.currentPushDay forKey:@"currentPushDay"];
         [self.navigationController pushViewController:view animated:YES];
     }
 }
