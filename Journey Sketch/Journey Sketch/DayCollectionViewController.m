@@ -10,6 +10,7 @@
 #import "DayCollectionViewCell.h"
 #import "CoreDataClass.h"
 #import "Place+CoreDataClass.h"
+#import "DayCollectionReusableView.h"
 
 @interface DayCollectionViewController ()
 @property CoreDataClass * coreData;
@@ -89,8 +90,8 @@ static NSString * const reuseIdentifier = @"places";
 
 -(UICollectionReusableView*)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     
-    UICollectionReusableView* reuseView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"dayHeader" forIndexPath:indexPath];
-    [reuseView setValue:self.currentPushDay forKey:@"day"];
+    DayCollectionReusableView* reuseView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"dayHeader" forIndexPath:indexPath];
+    [reuseView.day setText:self.currentPushDay];
     return reuseView;
     
 }
