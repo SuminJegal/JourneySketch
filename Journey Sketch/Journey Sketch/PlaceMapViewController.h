@@ -12,5 +12,8 @@
 @interface PlaceMapViewController : UIViewController {
     GMSMapView *mapView_;
 }
-
+@property NSString * placeName;
+@property NSString * placeAddress;
+@property double placeLatitude;
+@property double placeLongitude;
 @end

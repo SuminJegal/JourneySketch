@@ -99,7 +99,7 @@
     self.placeName = place.name;
     self.placeAddress = place.formattedAddress;
     self.placeAttribution = place.attributions;
-    self.placeLatitude = place.coordinate.longitude;
+    self.placeLatitude = place.coordinate.latitude;
     self.placeLongitude = place.coordinate.longitude;
     
 }

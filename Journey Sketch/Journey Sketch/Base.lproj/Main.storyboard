@@ -153,7 +153,7 @@
         <scene sceneID="oSu-L6-59e">
             <objects>
                 <collectionViewController storyboardIdentifier="dayView" id="Vae-y6-e9Y" customClass="DayCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="GP7-wd-LPV">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="GP7-wd-LPV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -331,6 +331,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="Oma-RW-r58" id="r9O-ti-cvU"/>
+                        <outlet property="placeAddress" destination="yBR-qu-TO2" id="dIs-Za-pvq"/>
+                        <outlet property="placeAttribution" destination="ZIC-Cv-euM" id="3ex-0E-mM3"/>
+                        <outlet property="placeName" destination="tYl-Db-iwc" id="fts-1d-2Tt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jh5-qn-DJ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -340,7 +346,7 @@
         <scene sceneID="PxA-o5-JIB">
             <objects>
                 <collectionViewController id="lN1-Oi-puj" customClass="TripUICollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="vov-S7-Gad">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="vov-S7-Gad">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -401,7 +407,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EjH-VH-OkO" customClass="CreateTripToDayNavigationViewController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Kdo-JF-dqB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kdo-JF-dqB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -437,7 +443,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yxc-3P-g2R" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Uec-ym-dJz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uec-ym-dJz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -455,7 +461,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cmu-CD-Cdz" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="WQv-W6-R4I">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WQv-W6-R4I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

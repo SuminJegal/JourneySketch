@@ -16,6 +16,7 @@
 @property CoreDataClass * coreData;
 @property NSArray * placeData;
 @property NSString * currentPushDay;
+@property NSString * currentPushName;
 @end
 
 @implementation DayCollectionViewController
@@ -108,6 +109,9 @@ static NSString * const reuseIdentifier = @"places";
     }else{
         UIViewController* view = [self.storyboard instantiateViewControllerWithIdentifier:@"oldPlace"];
         
+        Place * place_instance = [self.placeData objectAtIndex:indexPath.row];
+        self.currentPushName = place_instance.name;
+        [view setValue:self.currentPushName forKey:@"currentPushName"];
         [view setValue:self.currentPushDay forKey:@"currentPushDay"];
         [self.navigationController pushViewController:view animated:YES];
     }

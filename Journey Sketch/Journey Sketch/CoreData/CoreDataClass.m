@@ -348,8 +348,8 @@
     
     NSError* error;
     
-    NSNumber * temp_latitude = [NSNumber numberWithInt:latitude];
-    NSNumber * temp_longitude = [NSNumber numberWithInt:longitude];
+    NSNumber * temp_latitude = [NSNumber numberWithDouble:latitude];
+    NSNumber * temp_longitude = [NSNumber numberWithDouble:longitude];
 
     [newPlaceAttribute setValue:placeId forKey:@"placeID"];
     [newPlaceAttribute setValue:name forKey:@"name"];

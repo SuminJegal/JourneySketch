@@ -15,20 +15,18 @@
 @implementation PlaceMapViewController
 
 - (void)viewDidLoad {
-    // Create a GMSCameraPosition that tells the map to display the
-    // coordinate -33.86,151.20 at zoom level 6.
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
-                                                            longitude:151.20
-                                                                 zoom:6];
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:self.placeLatitude
+                                                            longitude:self.placeLongitude
+                                                                 zoom:14];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.myLocationEnabled = YES;
     self.view = mapView_;
     
     // Creates a marker in the center of the map.
     GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
-    marker.title = @"Sydney";
-    marker.snippet = @"Australia";
+    marker.position = CLLocationCoordinate2DMake(self.placeLatitude, self.placeLongitude);
+    marker.title = self.placeName;
+    marker.snippet = self.placeAddress;
     marker.map = mapView_;
 }
 
