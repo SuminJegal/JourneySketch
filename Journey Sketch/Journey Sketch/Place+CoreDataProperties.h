@@ -17,11 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, copy) NSString *address;
 @property (nullable, nonatomic, copy) NSString *attribution;
+@property (nullable, nonatomic, copy) NSString *day;
 @property (nonatomic) double latitude;
 @property (nonatomic) double longitude;
 @property (nullable, nonatomic, copy) NSString *name;
 @property (nullable, nonatomic, copy) NSString *placeID;
-@property (nullable, nonatomic, copy) NSString *day;
+@property (nullable, nonatomic, copy) NSString *information;
 @property (nullable, nonatomic, retain) Date *dayHavePlace;
 
 @end

@@ -67,7 +67,7 @@
     self.coreData =  [[CoreDataClass alloc] init];
     
     _resultsViewController = [[GMSAutocompleteResultsViewController alloc] init];
-    [_resultsViewController setDelegate:self];
+    _resultsViewController.delegate = self;
     
     _searchController = [[UISearchController alloc]
                          initWithSearchResultsController:_resultsViewController];
@@ -98,7 +98,8 @@
     self.placeId = place.placeID;
     self.placeName = place.name;
     self.placeAddress = place.formattedAddress;
-    self.placeAttribution = place.attributions;
+    self.placeAttribution = place.phoneNumber;
+    //self.placeAttribution = place.attributions;
     self.placeLatitude = place.coordinate.latitude;
     self.placeLongitude = place.coordinate.longitude;
     

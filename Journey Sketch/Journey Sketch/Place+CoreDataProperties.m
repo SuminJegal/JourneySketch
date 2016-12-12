@@ -16,11 +16,12 @@
 
 @dynamic address;
 @dynamic attribution;
+@dynamic day;
 @dynamic latitude;
 @dynamic longitude;
 @dynamic name;
 @dynamic placeID;
-@dynamic day;
+@dynamic information;
 @dynamic dayHavePlace;
 
 @end

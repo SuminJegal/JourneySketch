@@ -10,13 +10,16 @@
 #import "Place+CoreDataClass.h"
 #import "PlaceMapViewController.h"
 #import "CoreDataClass.h"
+@import GooglePlaces;
 
 @interface PlaceViewController ()
 @property NSString * currentPushDay;
 @property CoreDataClass * coreData;
 @property Place * placeData;
+@property NSString * currentPushID;
 @property NSString * currentPushName;
 @property NSString * currentPushAddress;
+@property (weak, nonatomic) IBOutlet UITextView *text;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UILabel *placeName;
 @property (weak, nonatomic) IBOutlet UILabel *placeAddress;
@@ -34,7 +37,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    
+    [self loadFirstPhotoForPlace:self.currentPushID];
 }
 
 
@@ -43,7 +46,42 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)loadFirstPhotoForPlace:(NSString *)placeID {
+    [[GMSPlacesClient sharedClient]
+     lookUpPhotosForPlaceID:placeID
+     callback:^(GMSPlacePhotoMetadataList *_Nullable photos,
+                NSError *_Nullable error) {
+         if (error) {
+             // TODO: handle the error.
+             NSLog(@"Error: %@", [error description]);
+         } else {
+             if (photos.results.count > 0) {
+                 GMSPlacePhotoMetadata *firstPhoto = photos.results.firstObject;
+                 [self loadImageForMetadata:firstPhoto];
+             }
+         }
+     }];
+}
 
+- (void)loadImageForMetadata:(GMSPlacePhotoMetadata *)photoMetadata {
+    [[GMSPlacesClient sharedClient]
+     loadPlacePhoto:photoMetadata
+     constrainedToSize:self.image.bounds.size
+     scale:self.image.window.screen.scale
+     callback:^(UIImage *_Nullable photo, NSError *_Nullable error) {
+         if (error) {
+             // TODO: handle the error.
+             NSLog(@"Error: %@", [error description]);
+         } else {
+             self.image.image = photo;
+         }
+     }];
+}
+
+- (IBAction)saveText:(id)sender {
+    NSManagedObject * temp_place = [self.coreData getOneDataWithAttribute:@"name" inStringValue:self.currentPushName inEntity:@"Place"];
+    [self.coreData setOneDataWithAttribute:@"information" inValue:self.text.text inUniqueEntityObject:temp_place];
+}
 
 #pragma mark - Navigation
 
@@ -55,9 +93,15 @@
     [self.placeName setText:self.placeData.name];
     [self.placeAddress setText:self.placeData.address];
     [self.placeAttribution setText:self.placeData.attribution];
+    if(self.placeData.information){
+        [self.text setText:self.placeData.information];
+    }
+    
+    self.currentPushID = self.placeData.placeID;
     self.currentPushAddress = self.placeData.address;
     self.placeLatitude = self.placeData.latitude;
     self.placeLongitude = self.placeData.longitude;
+    
     if([segue.destinationViewController isKindOfClass:[PlaceMapViewController class]]) {
         PlaceMapViewController *ivc = (PlaceMapViewController *)segue.destinationViewController;
         [ivc setValue:self.currentPushName forKey:@"placeName"];

@@ -78,6 +78,12 @@
 // */
 - (void)setOneDataWithAttribute:(NSString*)attribute inValue:(NSString*)value inEntity:(NSString*)entityForName;
 /*
+ * 기능 : 특정한 엔터티 객체에 원하는 값을 저장한다
+ * 파라메터 : 저장하고 싶은 필드값(NSString), 저장할 값(NSNumber), 저장 할 엔터티 객체(NSManagedObject)
+ * 반환값 : 없음
+ */
+- (void)setOneDataWithAttribute:(NSString *)attribute inValue:(NSString *)value inUniqueEntityObject:(NSManagedObject *)entity;
+/*
  * 기능 : 특정 엔터티에 원하는 값 두개를 저장한다
  * 파라메터 : 저장하고 싶은 필드값1(NSString), 저장할 값1(NSNumber), 저장 할 엔터티 이름(NSString), 저장하고 싶은 필드값2(NSString), 저장할 값2(NSNumber)
  * 반환값 : 없음

@@ -11,6 +11,7 @@
 #import "CoreDataClass.h"
 #import "Place+CoreDataClass.h"
 #import "DayCollectionReusableView.h"
+@import GooglePlaces;
 
 @interface DayCollectionViewController ()
 @property CoreDataClass * coreData;
@@ -82,6 +83,7 @@ static NSString * const reuseIdentifier = @"places";
     }else{
         Place * place = [self.placeData objectAtIndex:indexPath.row];
         [cell.label setText:place.name];
+        [self loadFirstPhotoForPlace:place.placeID inImageView:cell.image];
     }
     
     // Configure the cell
@@ -116,6 +118,39 @@ static NSString * const reuseIdentifier = @"places";
         [self.navigationController pushViewController:view animated:YES];
     }
 }
+
+- (void)loadFirstPhotoForPlace:(NSString *)placeID inImageView:(UIImageView *)image{
+    [[GMSPlacesClient sharedClient]
+     lookUpPhotosForPlaceID:placeID
+     callback:^(GMSPlacePhotoMetadataList *_Nullable photos,
+                NSError *_Nullable error) {
+         if (error) {
+             // TODO: handle the error.
+             NSLog(@"Error: %@", [error description]);
+         } else {
+             if (photos.results.count > 0) {
+                 GMSPlacePhotoMetadata *firstPhoto = photos.results.firstObject;
+                 [self loadImageForMetadata:firstPhoto inImageView:image];
+             }
+         }
+     }];
+}
+
+- (void)loadImageForMetadata:(GMSPlacePhotoMetadata *)photoMetadata inImageView:(UIImageView *)image{
+    [[GMSPlacesClient sharedClient]
+     loadPlacePhoto:photoMetadata
+     constrainedToSize:image.bounds.size
+     scale:image.window.screen.scale
+     callback:^(UIImage *_Nullable photo, NSError *_Nullable error) {
+         if (error) {
+             // TODO: handle the error.
+             NSLog(@"Error: %@", [error description]);
+         } else {
+             image.image = photo;
+         }
+     }];
+}
+
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
