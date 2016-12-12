@@ -33,6 +33,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.userInteractionEnabled = YES;
     // Do any additional setup after loading the view.
 }
 
@@ -44,6 +45,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    UITouch *touch = [[event allTouches] anyObject];
+    if ([_text isFirstResponder] && [touch view] != _text) {
+        [_text resignFirstResponder];
+    }
 }
 
 - (void)loadFirstPhotoForPlace:(NSString *)placeID {
@@ -82,6 +91,7 @@
     NSManagedObject * temp_place = [self.coreData getOneDataWithAttribute:@"name" inStringValue:self.currentPushName inEntity:@"Place"];
     [self.coreData setOneDataWithAttribute:@"information" inValue:self.text.text inUniqueEntityObject:temp_place];
 }
+
 
 #pragma mark - Navigation
 
