@@ -690,6 +690,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3N2B4ECPAU;
 				INFOPLIST_FILE = "Journey Sketch/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cnu.ac.kr.Journey-Sketch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -707,6 +708,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3N2B4ECPAU;
 				INFOPLIST_FILE = "Journey Sketch/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cnu.ac.kr.Journey-Sketch";
 				PRODUCT_NAME = "$(TARGET_NAME)";

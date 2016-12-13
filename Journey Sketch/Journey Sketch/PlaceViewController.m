@@ -12,7 +12,7 @@
 #import "CoreDataClass.h"
 @import GooglePlaces;
 
-@interface PlaceViewController ()
+@interface PlaceViewController () <UIScrollViewDelegate>
 @property NSString * currentPushDay;
 @property CoreDataClass * coreData;
 @property Place * placeData;
@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *placeAttribution;
 @property double placeLatitude;
 @property double placeLongitude;
+@property (weak, nonatomic) IBOutlet UIScrollView *mScrollView;
 
 @end
 
@@ -35,6 +36,9 @@
     [super viewDidLoad];
     self.view.userInteractionEnabled = YES;
     // Do any additional setup after loading the view.
+    [self.mScrollView setDelegate:self];
+    
+    [self.mScrollView setContentSize:CGSizeMake(self.mScrollView.frame.size.width, 1000)];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
