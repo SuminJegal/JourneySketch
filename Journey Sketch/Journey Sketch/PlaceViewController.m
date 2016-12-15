@@ -39,6 +39,7 @@
     [self.mScrollView setDelegate:self];
     
     [self.mScrollView setContentSize:CGSizeMake(self.mScrollView.frame.size.width, 1000)];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -51,13 +52,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [super touchesBegan:touches withEvent:event];
-    UITouch *touch = [[event allTouches] anyObject];
-    if ([_text isFirstResponder] && [touch view] != _text) {
-        [_text resignFirstResponder];
-    }
-}
+//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+//    [super touchesBegan:touches withEvent:event];
+//    UITouch *touch = [[event allTouches] anyObject];
+//    if ([_text isFirstResponder] && [touch view] != _text) {
+//        [_text resignFirstResponder];
+//    }
+//}
 
 - (void)loadFirstPhotoForPlace:(NSString *)placeID {
     [[GMSPlacesClient sharedClient]
