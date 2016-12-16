@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DayCellDelegate
+-(void)deleteButtonClick:(UICollectionViewCell *)cell;
+@end
+
 @interface DayCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (weak , nonatomic) id<DayCellDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 
 @end

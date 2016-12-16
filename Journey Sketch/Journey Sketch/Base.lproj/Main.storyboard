@@ -174,6 +174,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="366" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihN-EQ-eE0">
+                                            <rect key="frame" x="291" y="0.0" width="75" height="200"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="1" green="0.28034756451410114" blue="0.32338949906651493" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="delete">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="clickDeleteButton" destination="JIh-Sk-oDB" eventType="touchUpInside" id="0yK-Rs-LZP"/>
+                                            </connections>
+                                        </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v51-tF-pI1">
                                             <rect key="frame" x="0.0" y="0.0" width="366" height="200"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -190,6 +201,7 @@
                                 </view>
                                 <size key="customSize" width="366" height="200"/>
                                 <connections>
+                                    <outlet property="deleteButton" destination="ihN-EQ-eE0" id="nFh-Ii-rEH"/>
                                     <outlet property="image" destination="v51-tF-pI1" id="fYI-pa-cb2"/>
                                     <outlet property="label" destination="CVL-La-c1m" id="vjH-L4-NeE"/>
                                 </connections>

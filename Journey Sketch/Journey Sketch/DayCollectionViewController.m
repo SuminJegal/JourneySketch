@@ -24,11 +24,11 @@
 
 static NSString * const reuseIdentifier = @"places";
 
-- (void)userDidSwipe:(UIGestureRecognizer *)gestureRecognizer {
-    if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
-        //handle the gesture appropriately
-    }
-}
+//- (void)userDidSwipe:(UIGestureRecognizer *)gestureRecognizer {
+//    if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+//        //handle the gesture appropriately
+//    }
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -81,10 +81,10 @@ static NSString * const reuseIdentifier = @"places";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     DayCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    UISwipeGestureRecognizer* gestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userDidSwipe:)];
-    gestureRecognizer.numberOfTouchesRequired = 1;
-    [gestureRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
-    [cell addGestureRecognizer:gestureRecognizer];
+//    UISwipeGestureRecognizer* gestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userDidSwipe:)];
+//    gestureRecognizer.numberOfTouchesRequired = 1;
+//    [gestureRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
+//    [cell addGestureRecognizer:gestureRecognizer];
     
     if(indexPath.row == [self.placeData count]){
         [cell.label setText:@"New"];
