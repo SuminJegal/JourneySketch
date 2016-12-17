@@ -59,7 +59,17 @@ static NSString * const reuseIdentifier = @"places";
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"goToBeforeDay"]){
-        if([segue.destinationViewController isKindOfClass:[DayCollectionViewController class]]) {
+        NSManagedObject * checkIsItFirstDay = [self.coreData getOneDataWithAttribute:@"tripNumber" inStringValue:self.currentPushDay inEntity:@"Trip"];
+        if(checkIsItFirstDay){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"이전 날짜로 이동이 불가능합니다"
+                                                            message:@"이미 여행의 첫날입니다"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Done" otherButtonTitles:nil];
+            [alert show];
+            //[alert release];
+            DayCollectionViewController *ivc = (DayCollectionViewController *)segue.destinationViewController;
+            [ivc setValue:self.currentPushDay forKey:@"currentPushDay"];
+        } else {
             DayCollectionViewController *ivc = (DayCollectionViewController *)segue.destinationViewController;
             NSDate * beforeDate = [self getDateFromString:self.currentPushDay];
             beforeDate = [beforeDate dateByAddingTimeInterval:-(24*60*60)];
@@ -141,6 +151,8 @@ static NSString * const reuseIdentifier = @"places";
     }
 }
 
+#pragma mark <loadImage>
+
 - (void)loadFirstPhotoForPlace:(NSString *)placeID inImageView:(UIImageView *)image{
     [[GMSPlacesClient sharedClient]
      lookUpPhotosForPlaceID:placeID
@@ -156,6 +168,9 @@ static NSString * const reuseIdentifier = @"places";
              }
          }
      }];
+    if(image.image == nil){
+        [image setImage:[UIImage imageNamed:@"default_museum.jpg"]];
+    }
 }
 
 - (void)loadImageForMetadata:(GMSPlacePhotoMetadata *)photoMetadata inImageView:(UIImageView *)image{

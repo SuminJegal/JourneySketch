@@ -14,6 +14,7 @@
 		C909593F1DF59AED00271D25 /* StartPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C909593E1DF59AED00271D25 /* StartPlaceViewController.m */; };
 		C90959411DF5A07E00271D25 /* historically-1757930_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C90959401DF5A07E00271D25 /* historically-1757930_1280.jpg */; };
 		C90959451DF5B47300271D25 /* startImage.png in Resources */ = {isa = PBXBuildFile; fileRef = C90959441DF5B47300271D25 /* startImage.png */; };
+		C90F1E301E0593A500CE2FE3 /* default_museum.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C90F1E2F1E0593A500CE2FE3 /* default_museum.jpg */; };
 		C91705AF1DFAE36B00A7B272 /* searchPlace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C91705AE1DFAE36B00A7B272 /* searchPlace.jpg */; };
 		C91869A21DF7F958001A6AC2 /* CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C91869A11DF7F958001A6AC2 /* CoreDataClass.m */; };
 		C91869CC1DF80B16001A6AC2 /* Place+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C91869C11DF80B16001A6AC2 /* Place+CoreDataClass.m */; };
@@ -72,6 +73,7 @@
 		C909593E1DF59AED00271D25 /* StartPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartPlaceViewController.m; sourceTree = "<group>"; };
 		C90959401DF5A07E00271D25 /* historically-1757930_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "historically-1757930_1280.jpg"; sourceTree = "<group>"; };
 		C90959441DF5B47300271D25 /* startImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startImage.png; sourceTree = "<group>"; };
+		C90F1E2F1E0593A500CE2FE3 /* default_museum.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = default_museum.jpg; sourceTree = "<group>"; };
 		C91705AE1DFAE36B00A7B272 /* searchPlace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = searchPlace.jpg; sourceTree = "<group>"; };
 		C91869A01DF7F958001A6AC2 /* CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataClass.h; sourceTree = "<group>"; };
 		C91869A11DF7F958001A6AC2 /* CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataClass.m; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 		C969E8B21DF1CD5200E1DF67 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				C90F1E2F1E0593A500CE2FE3 /* default_museum.jpg */,
 				C91705AE1DFAE36B00A7B272 /* searchPlace.jpg */,
 				C90959401DF5A07E00271D25 /* historically-1757930_1280.jpg */,
 				C90959441DF5B47300271D25 /* startImage.png */,
@@ -438,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C91705AF1DFAE36B00A7B272 /* searchPlace.jpg in Resources */,
+				C90F1E301E0593A500CE2FE3 /* default_museum.jpg in Resources */,
 				C9C111F91DBDF9D200503177 /* LaunchScreen.storyboard in Resources */,
 				C969E8B41DF1CD5200E1DF67 /* clouds-1845097_1280.jpg in Resources */,
 				C90959451DF5B47300271D25 /* startImage.png in Resources */,

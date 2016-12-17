@@ -70,6 +70,9 @@
              }
          }
      }];
+    if(self.image.image == nil){
+        [self.image setImage:[UIImage imageNamed:@"default_museum.jpg"]];
+    }
 }
 
 - (void)loadImageForMetadata:(GMSPlacePhotoMetadata *)photoMetadata {

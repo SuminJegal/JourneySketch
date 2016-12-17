@@ -108,6 +108,8 @@ static NSString * const reuseIdentifier = @"eachTrip";
     }
 }
 
+#pragma mark <loadImage>
+
 - (void)loadFirstPhotoForPlace:(NSString *)placeID inImageView:(UIImageView *)image{
     [[GMSPlacesClient sharedClient]
      lookUpPhotosForPlaceID:placeID
@@ -123,6 +125,9 @@ static NSString * const reuseIdentifier = @"eachTrip";
              }
          }
      }];
+    if(image.image == nil){
+        [image setImage:[UIImage imageNamed:@"default_museum.jpg"]];
+    }
 }
 
 - (void)loadImageForMetadata:(GMSPlacePhotoMetadata *)photoMetadata inImageView:(UIImageView *)image{
