@@ -12,7 +12,7 @@
 #import "CoreDataClass.h"
 @import GooglePlaces;
 
-@interface PlaceViewController ()
+@interface PlaceViewController () <UITextViewDelegate>
 @property NSString * currentPushDay;
 @property CoreDataClass * coreData;
 @property Place * placeData;
@@ -35,6 +35,9 @@
     [super viewDidLoad];
     self.view.userInteractionEnabled = YES;
     // Do any additional setup after loading the view.
+    _text.delegate = self;
+    _text.text = @"여행지 정보를 입력하세요.";
+    _text.textColor = [UIColor lightGrayColor];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -90,6 +93,24 @@
 - (IBAction)saveText:(id)sender {
     NSManagedObject * temp_place = [self.coreData getOneDataWithAttribute:@"name" inStringValue:self.currentPushName inEntity:@"Place"];
     [self.coreData setOneDataWithAttribute:@"information" inValue:self.text.text inUniqueEntityObject:temp_place];
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@"여행지 정보를 입력하세요."]) {
+        textView.text = @"";
+        textView.textColor = [UIColor blackColor]; //optional
+    }
+    [textView becomeFirstResponder];
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@""]) {
+        textView.text = @"여행지 정보를 입력하세요.";
+        textView.textColor = [UIColor lightGrayColor]; //optional
+    }
+    [textView resignFirstResponder];
 }
 
 
