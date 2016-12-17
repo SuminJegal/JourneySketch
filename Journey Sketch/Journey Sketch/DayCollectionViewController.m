@@ -61,7 +61,13 @@ static NSString * const reuseIdentifier = @"places";
     if([segue.identifier isEqualToString:@"goToBeforeDay"]){
         
     } else if([segue.identifier isEqualToString:@"goToNextDay"]) {
-        
+        if([segue.destinationViewController isKindOfClass:[DayCollectionViewController class]]) {
+            DayCollectionViewController *ivc = (DayCollectionViewController *)segue.destinationViewController;
+            NSDate * nextDate = [self getDateFromString:self.currentPushDay];
+            nextDate = [nextDate dateByAddingTimeInterval:24*60*60];
+            NSString * nextDay = [self getStringFromDate:nextDate];
+            [ivc setValue:nextDay forKey:@"currentPushDay"];
+        }
     } else {
         
     }
@@ -159,6 +165,23 @@ static NSString * const reuseIdentifier = @"places";
              image.image = photo;
          }
      }];
+}
+
+#pragma mark <DateFormatter>
+
+- (NSString *)getStringFromDate:(NSDate *)date{
+    NSDateFormatter *dateformatter = [[NSDateFormatter alloc]init];
+    [dateformatter setDateFormat:@"yyyy.MM.dd"];
+    NSString * string = [dateformatter stringFromDate:date];
+    return string;
+}
+
+- (NSDate *)getDateFromString:(NSString *)string{
+    NSDateFormatter *dateformatter = [[NSDateFormatter alloc]init];
+    //[dateformatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
+    [dateformatter setDateFormat:@"yyyy.MM.dd"];
+    NSDate * date = [dateformatter dateFromString:string];
+    return date;
 }
 
 
