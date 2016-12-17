@@ -35,7 +35,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    [self.startImage setImage:[UIImage imageNamed:@"startImage.png"]];
+    [self.startImage setImage:[UIImage imageNamed:@"start.jpg"]];
     [self.navigationController setNavigationBarHidden:YES];
 }
 
