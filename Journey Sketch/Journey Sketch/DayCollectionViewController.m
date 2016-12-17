@@ -178,7 +178,6 @@ static NSString * const reuseIdentifier = @"places";
 
 - (NSDate *)getDateFromString:(NSString *)string{
     NSDateFormatter *dateformatter = [[NSDateFormatter alloc]init];
-    //[dateformatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
     [dateformatter setDateFormat:@"yyyy.MM.dd"];
     NSDate * date = [dateformatter dateFromString:string];
     return date;
