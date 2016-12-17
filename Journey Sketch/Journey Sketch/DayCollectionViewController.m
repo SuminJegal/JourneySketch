@@ -59,7 +59,13 @@ static NSString * const reuseIdentifier = @"places";
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"goToBeforeDay"]){
-        
+        if([segue.destinationViewController isKindOfClass:[DayCollectionViewController class]]) {
+            DayCollectionViewController *ivc = (DayCollectionViewController *)segue.destinationViewController;
+            NSDate * beforeDate = [self getDateFromString:self.currentPushDay];
+            beforeDate = [beforeDate dateByAddingTimeInterval:-(24*60*60)];
+            NSString * beforeDay = [self getStringFromDate:beforeDate];
+            [ivc setValue:beforeDay forKey:@"currentPushDay"];
+        }
     } else if([segue.identifier isEqualToString:@"goToNextDay"]) {
         if([segue.destinationViewController isKindOfClass:[DayCollectionViewController class]]) {
             DayCollectionViewController *ivc = (DayCollectionViewController *)segue.destinationViewController;
