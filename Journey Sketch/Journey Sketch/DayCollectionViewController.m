@@ -55,26 +55,27 @@ static NSString * const reuseIdentifier = @"places";
 
 #pragma mark - Navigation
 
-/*
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
-    
-}*/
+    if([segue.identifier isEqualToString:@"goToBeforeDay"]){
+        
+    } else if([segue.identifier isEqualToString:@"goToNextDay"]) {
+        
+    } else {
+        
+    }
+}
 
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
     return [self.placeData count]+1;
 }
 

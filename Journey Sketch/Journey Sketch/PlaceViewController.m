@@ -35,9 +35,6 @@
     [super viewDidLoad];
     self.view.userInteractionEnabled = YES;
     // Do any additional setup after loading the view.
-    _text.delegate = self;
-    _text.text = @"여행지 정보를 입력하세요.";
-    _text.textColor = [UIColor lightGrayColor];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -118,6 +115,9 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    self.text.delegate = self;
+    
     self.coreData =  [[CoreDataClass alloc] init];
     self.placeData = [self.coreData getOneDataWithAttribute:@"name" inStringValue:self.currentPushName inEntity:@"Place"];
     [self.navigationController setNavigationBarHidden:NO];
@@ -127,7 +127,10 @@
     if(self.placeData.information){
         [self.text setText:self.placeData.information];
     }
-    
+    else{
+        self.text.text = @"여행지 정보를 입력하세요.";
+        self.text.textColor = [UIColor lightGrayColor];
+    }
     self.currentPushID = self.placeData.placeID;
     self.currentPushAddress = self.placeData.address;
     self.placeLatitude = self.placeData.latitude;
