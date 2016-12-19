@@ -38,13 +38,14 @@ static NSString * const reuseIdentifier = @"places";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-   // [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    // [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,22 +61,11 @@ static NSString * const reuseIdentifier = @"places";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"goToBeforeDay"]){
         NSManagedObject * checkIsItFirstDay = [self.coreData getOneDataWithAttribute:@"tripNumber" inStringValue:self.currentPushDay inEntity:@"Trip"];
-        if(checkIsItFirstDay){
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"이전 날짜로 이동이 불가능합니다"
-                                                            message:@"이미 여행의 첫날입니다"
-                                                           delegate:self
-                                                  cancelButtonTitle:@"Done" otherButtonTitles:nil];
-            [alert show];
-            //[alert release];
-            DayCollectionViewController *ivc = (DayCollectionViewController *)segue.destinationViewController;
-            [ivc setValue:self.currentPushDay forKey:@"currentPushDay"];
-        } else {
-            DayCollectionViewController *ivc = (DayCollectionViewController *)segue.destinationViewController;
-            NSDate * beforeDate = [self getDateFromString:self.currentPushDay];
-            beforeDate = [beforeDate dateByAddingTimeInterval:-(24*60*60)];
-            NSString * beforeDay = [self getStringFromDate:beforeDate];
-            [ivc setValue:beforeDay forKey:@"currentPushDay"];
-        }
+        DayCollectionViewController *ivc = (DayCollectionViewController *)segue.destinationViewController;
+        NSDate * beforeDate = [self getDateFromString:self.currentPushDay];
+        beforeDate = [beforeDate dateByAddingTimeInterval:-(24*60*60)];
+        NSString * beforeDay = [self getStringFromDate:beforeDate];
+        [ivc setValue:beforeDay forKey:@"currentPushDay"];
     } else if([segue.identifier isEqualToString:@"goToNextDay"]) {
         if([segue.destinationViewController isKindOfClass:[DayCollectionViewController class]]) {
             DayCollectionViewController *ivc = (DayCollectionViewController *)segue.destinationViewController;
@@ -104,10 +94,10 @@ static NSString * const reuseIdentifier = @"places";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     DayCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-//    UISwipeGestureRecognizer* gestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userDidSwipe:)];
-//    gestureRecognizer.numberOfTouchesRequired = 1;
-//    [gestureRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
-//    [cell addGestureRecognizer:gestureRecognizer];
+    //    UISwipeGestureRecognizer* gestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userDidSwipe:)];
+    //    gestureRecognizer.numberOfTouchesRequired = 1;
+    //    [gestureRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
+    //    [cell addGestureRecognizer:gestureRecognizer];
     
     if(indexPath.row == [self.placeData count]){
         [cell.label setText:@"New"];
@@ -127,6 +117,10 @@ static NSString * const reuseIdentifier = @"places";
     
     DayCollectionReusableView* reuseView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"dayHeader" forIndexPath:indexPath];
     [reuseView.day setText:self.currentPushDay];
+    NSManagedObject * checkIsItFirstDay = [self.coreData getOneDataWithAttribute:@"tripNumber" inStringValue:self.currentPushDay inEntity:@"Trip"];
+    if(checkIsItFirstDay){
+        [reuseView.goToBefore setHidden:YES];
+    }
     return reuseView;
     
 }
@@ -206,32 +200,32 @@ static NSString * const reuseIdentifier = @"places";
 
 
 /*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+ // Uncomment this method to specify if the specified item should be highlighted during tracking
+ - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
 	return YES;
-}
-*/
+ }
+ */
 
 /*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
+ // Uncomment this method to specify if the specified item should be selected
+ - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+ return YES;
+ }
+ */
 
 /*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
+ // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
+ - (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
 	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
+ }
+ 
+ - (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
 	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
+ }
+ 
+ - (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
 	
-}
-*/
+ }
+ */
 
 @end

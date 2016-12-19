@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DayCollectionReusableView : UICollectionReusableView
+@property (weak, nonatomic) IBOutlet UIButton *goToBefore;
 @property (weak, nonatomic) IBOutlet UILabel *day;
 @end
